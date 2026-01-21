@@ -31,6 +31,9 @@ AI-powered swing jazz arrangement generator for transforming songs into 1920s-19
 │   │   └── full-score.md
 │   └── crescendo-i-gagata/
 │       └── ...
+├── notation/         # LilyPond sources and rendered notation assets
+│   ├── src/          # .ly source files
+│   └── out/          # Rendered SVG/PDF (generated)
 ├── scripts/          # Utility scripts
 └── output/           # Generated PDFs (gitignored)
 ```
@@ -87,6 +90,22 @@ PDFs will be saved to `output/pdf/`.
 ### Manual generation:
 ```bash
 npx md-to-pdf songs/vaarherres-klinkekule/keyboard.md
+```
+
+## Render LilyPond notation (SVG + PDF)
+
+1. Install LilyPond and ensure `lilypond` is on your PATH.
+2. Render all `.ly` sources:
+   ```bash
+   npm run render:lilypond
+   ```
+3. Outputs:
+   - SVG: `notation/out/svg/`
+   - PDF: `notation/out/pdf/`
+
+Embedding in Eleventy Markdown/Nunjucks:
+```njk
+{% raw %}{% notationSvg "brush-intro" "Brush intro (4 bars)" %}{% endraw %}
 ```
 
 ## Band Members Quick Start
