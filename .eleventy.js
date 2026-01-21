@@ -11,12 +11,21 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/midi");
   eleventyConfig.addPassthroughCopy("site/downloads");
   eleventyConfig.addPassthroughCopy("site/CNAME");
+  eleventyConfig.addPassthroughCopy("notation/out");
 
   // Add markdown filter for rendering markdown in templates
   const markdownIt = require("markdown-it");
   const md = markdownIt({ html: true });
   eleventyConfig.addFilter("markdown", (content) => {
     return md.render(content || "");
+  });
+
+  // Embed rendered LilyPond SVGs by name (matching files in notation/out/svg/{name}.svg)
+  eleventyConfig.addShortcode("notationSvg", (name, caption = "") => {
+    if (!name) return "";
+    const src = `${pathPrefix}/notation/out/svg/${name}.svg`;
+    const safeCaption = caption ? `<figcaption>${md.renderInline(caption)}</figcaption>` : "";
+    return `<figure class="notation-figure"><img src="${src}" alt="${caption || name}" loading="lazy">${safeCaption}</figure>`;
   });
 
   // Add slug filter

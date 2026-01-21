@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notation | Guro and the Muppets</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/notation.css">
+  <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.77,npm/@magenta/music@1.23.1/es6/core.js,npm/html-midi-player@1.5.0"></script>
+</head>
+<body>
+  <header class="site-header">
+  <nav class="container">
+    <a href="/" class="logo">Guro and the Muppets</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li class="dropdown">
+        <a href="/songs/">Songs</a>
+        <ul class="dropdown-menu">
+          <li><a href="/songs/vaarherres-klinkekule/">Vaarherres Klinkekule</a></li>
+          <li><a href="/songs/crescendo-i-gagata/">Crescendo i Gagata</a></li>
+        </ul>
+      </li>
+      <li><a href="/knowledge/">Knowledge Base</a></li>
+      <li><a href="/notation/">Notation</a></li>
+      <li><a href="/agents/">Agents</a></li>
+      <li><a href="/skills/">Skills</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <main class="container">
+    <h1>LilyPond Notation Pipeline</h1>
+<p>We render engraving-quality snippets with LilyPond and embed the SVG/PDF outputs directly in Markdown and the site.</p>
+<h2>Render assets</h2>
+<ol>
+<li>Install LilyPond (make sure <code>lilypond</code> is on your PATH).</li>
+<li>Run:<pre><code class="language-bash">npm run render:lilypond
+</code></pre>
+</li>
+<li>Outputs go to:
+<ul>
+<li>SVG: <code>notation/out/svg/</code></li>
+<li>PDF: <code>notation/out/pdf/</code></li>
+</ul>
+</li>
+</ol>
+<h2>Embed in Markdown</h2>
+<p>Use the shortcode in pages:</p>
+<pre><code class="language-njk">{% notationSvg &quot;brush-intro&quot; &quot;Brush intro (4 bars)&quot; %}
+</code></pre>
+<h2>Example snippets</h2>
+<ul>
+<li>
+<p>Brushes intro (drums):</p>
+<figure class="notation-figure"><img src="/notation/out/svg/brush-intro.svg" alt="Brush intro (4 bars)" loading="lazy"><figcaption>Brush intro (4 bars)</figcaption></figure>
+</li>
+<li>
+<p>Oom-chunk guitar comp:</p>
+<figure class="notation-figure"><img src="/notation/out/svg/oom-chunk-guitar.svg" alt="Oom-CHUNK comp (Cmin - F7 - Cmin - G7)" loading="lazy"><figcaption>Oom-CHUNK comp (Cmin - F7 - Cmin - G7)</figcaption></figure>
+</li>
+</ul>
+<p>Update the <code>.ly</code> files in <code>notation/src/</code>, rerun the render script, and commit both the source and the rendered assets. PDFs can be linked alongside SVGs for print handouts.</p>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Guro and the Muppets. Swing jazz arrangements for lindy hop.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
