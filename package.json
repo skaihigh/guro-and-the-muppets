@@ -10,7 +10,8 @@
     "build:site": "node src/scripts/build-site.js",
     "serve": "npx @11ty/eleventy --serve",
     "serve:only": "npx @11ty/eleventy --serve --input=site --output=docs",
-    "deploy": "npm run build:site"
+    "deploy": "npm run build:site",
+    "render:lilypond": "bash scripts/render-lilypond.sh"
   },
   "keywords": [
     "music",
