@@ -56,7 +56,7 @@ function createDrumsTrack(options = {}) {
 function generateSwingPattern(bars, options = {}) {
   const {
     velocity = 'mf',
-    ticksPerBeat = 480,
+    ticksPerBeat = 128,
     includeKick = true,
     includeGhostNotes = true,
     useHiHat = false // Use hi-hat instead of ride
@@ -136,7 +136,7 @@ function generateSwingPattern(bars, options = {}) {
 function generateChorusPattern(bars, options = {}) {
   const {
     velocity = 'f',
-    ticksPerBeat = 480
+    ticksPerBeat = 128
   } = options;
 
   const hits = [];
@@ -199,7 +199,7 @@ function generateChorusPattern(bars, options = {}) {
  * @returns {Object[]} Array of drum hits
  */
 function generateGeneKrupaBreak(bars = 8, options = {}) {
-  const { ticksPerBeat = 480 } = options;
+  const { ticksPerBeat = 128 } = options;
 
   const hits = [];
   const velocityCurve = createDynamicCurve(
@@ -288,7 +288,7 @@ function generateGeneKrupaBreak(bars = 8, options = {}) {
 function generateIntroPattern(bars, options = {}) {
   const {
     velocity = 'mp',
-    ticksPerBeat = 480
+    ticksPerBeat = 128
   } = options;
 
   const hits = [];
@@ -330,7 +330,7 @@ function generateIntroPattern(bars, options = {}) {
 function generateFill(fillType, options = {}) {
   const {
     velocity = 'f',
-    ticksPerBeat = 480
+    ticksPerBeat = 128
   } = options;
 
   const hits = [];
@@ -377,27 +377,43 @@ function generateFill(fillType, options = {}) {
  * @param {Object[]} hits - Array of drum hit objects
  * @param {number} ticksPerBeat - Resolution
  */
-function addDrumHitsToTrack(track, hits, ticksPerBeat = 480) {
+function addDrumHitsToTrack(track, hits, ticksPerBeat = 128) {
   // Sort hits by tick
   const sortedHits = [...hits].sort((a, b) => a.tick - b.tick);
 
   let lastTick = 0;
 
   for (const hit of sortedHits) {
-    const wait = hit.tick - lastTick;
+    // Add micro-timing humanization (±3% of a beat for natural feel)
+    const humanize = Math.round((Math.random() - 0.5) * ticksPerBeat * 0.06);
+    const adjustedTick = Math.max(0, hit.tick + humanize);
+    const wait = adjustedTick - lastTick;
 
     const waitNotation = wait > 0 ? `T${wait}` : '0';
 
+    // Use appropriate duration based on drum type for natural decay
+    let duration;
+    if (hit.drum === DRUM_NOTES.ride || hit.drum === DRUM_NOTES.crash ||
+        hit.drum === DRUM_NOTES.crash2 || hit.drum === DRUM_NOTES.splash) {
+      // Cymbals ring longer
+      duration = Math.round(ticksPerBeat * 1.5);
+    } else if (hit.drum === DRUM_NOTES.openHiHat) {
+      duration = Math.round(ticksPerBeat * 0.8);
+    } else {
+      // Snare, kick, toms - moderate sustain
+      duration = Math.round(ticksPerBeat * 0.5);
+    }
+
     const noteEvent = new MidiWriter.NoteEvent({
       pitch: hit.drum,
-      duration: 'T60', // Short duration for drums
+      duration: `T${duration}`,
       wait: waitNotation,
       velocity: Math.min(127, Math.max(1, hit.velocity)),
       channel: DRUMS_CHANNEL
     });
 
     track.addEvent(noteEvent);
-    lastTick = hit.tick;
+    lastTick = adjustedTick;
   }
 }
 

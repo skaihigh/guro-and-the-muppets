@@ -70,7 +70,7 @@ function applySwing(startTicks, ticksPerBeat, swingAmount = 'triplet') {
  * @param {number} ticksPerBeat - Resolution (default 480)
  * @returns {Object[]} Notes with adjusted wait/tick values
  */
-function createSwungNotes(notes, swingAmount = 'triplet', ticksPerBeat = 480) {
+function createSwungNotes(notes, swingAmount = 'triplet', ticksPerBeat = 128) {
   let swingRatio;
   if (typeof swingAmount === 'string') {
     swingRatio = (SWING_PRESETS[swingAmount] || SWING_PRESETS.triplet) / 100;
@@ -107,7 +107,7 @@ function createSwungNotes(notes, swingAmount = 'triplet', ticksPerBeat = 480) {
  * @param {number|string} swingAmount - Swing amount
  * @returns {{long: number, short: number}} Tick durations for long and short notes
  */
-function getSwungEighthNoteDurations(ticksPerBeat = 480, swingAmount = 'triplet') {
+function getSwungEighthNoteDurations(ticksPerBeat = 128, swingAmount = 'triplet') {
   let swingRatio;
   if (typeof swingAmount === 'string') {
     swingRatio = (SWING_PRESETS[swingAmount] || SWING_PRESETS.triplet) / 100;
@@ -134,7 +134,7 @@ function getSwungEighthNoteDurations(ticksPerBeat = 480, swingAmount = 'triplet'
  * @param {number|string} swingAmount - Swing amount
  * @returns {number} Tick position
  */
-function calculateSwungTick(bar, beat, ticksPerBeat = 480, beatsPerBar = 4, swingAmount = 'triplet') {
+function calculateSwungTick(bar, beat, ticksPerBeat = 128, beatsPerBar = 4, swingAmount = 'triplet') {
   let swingRatio;
   if (typeof swingAmount === 'string') {
     swingRatio = (SWING_PRESETS[swingAmount] || SWING_PRESETS.triplet) / 100;

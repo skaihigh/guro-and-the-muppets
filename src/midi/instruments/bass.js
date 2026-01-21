@@ -33,7 +33,7 @@ function generateWalkingBass(chords, options = {}) {
     octave = 2,
     velocity = 'mf',
     swing = 'triplet',
-    ticksPerBeat = 480
+    ticksPerBeat = 128
   } = options;
 
   const notes = [];
@@ -212,7 +212,7 @@ function generateVekselbass(chords, options = {}) {
     octave = 2,
     velocity = 'mf',
     swing = 'triplet',
-    ticksPerBeat = 480
+    ticksPerBeat = 128
   } = options;
 
   const notes = [];
@@ -257,14 +257,17 @@ function generateVekselbass(chords, options = {}) {
  * @param {Object[]} notes - Array of note objects
  * @param {number} ticksPerBeat - Resolution
  */
-function addNotesToTrack(track, notes, ticksPerBeat = 480) {
+function addNotesToTrack(track, notes, ticksPerBeat = 128) {
   // Sort notes by tick
   const sortedNotes = [...notes].sort((a, b) => a.tick - b.tick);
 
   let lastTick = 0;
 
   for (const note of sortedNotes) {
-    const wait = note.tick - lastTick;
+    // Add micro-timing humanization (±2% of beat for bass - subtle)
+    const humanize = Math.round((Math.random() - 0.5) * ticksPerBeat * 0.04);
+    const adjustedTick = Math.max(0, note.tick + humanize);
+    const wait = adjustedTick - lastTick;
 
     // Convert tick duration to midi-writer-js format
     const durationTicks = note.duration || ticksPerBeat;
@@ -280,7 +283,7 @@ function addNotesToTrack(track, notes, ticksPerBeat = 480) {
     });
 
     track.addEvent(noteEvent);
-    lastTick = note.tick;
+    lastTick = adjustedTick;
   }
 }
 

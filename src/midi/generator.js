@@ -10,8 +10,8 @@ const path = require('path');
 const { bass, drums, keyboard, guitar, saxophone } = require('./instruments');
 const { dynamicToVelocity, createDynamicCurve } = require('./utils');
 
-// Standard MIDI resolution
-const TICKS_PER_BEAT = 480;
+// midi-writer-js uses 128 ticks per beat by default
+const TICKS_PER_BEAT = 128;
 
 /**
  * Generate MIDI files for a song
@@ -112,6 +112,7 @@ function createTempoTrack(song) {
 function generateBassForSong(song, variant = 'standard') {
   const track = bass.createBassTrack();
   let currentTick = 0;
+  const allNotes = []; // Collect all notes first
 
   for (const section of song.sections) {
     // Skip drums-only sections for bass
@@ -145,18 +146,20 @@ function generateBassForSong(song, variant = 'standard') {
       notes = bass.generateWalkingBass(chordsWithPatterns, sectionOptions);
     }
 
-    // Offset notes by current position
-    const offsetNotes = notes.map(note => ({
-      ...note,
-      tick: note.tick + currentTick
-    }));
+    // Offset notes by current position and collect
+    for (const note of notes) {
+      allNotes.push({
+        ...note,
+        tick: note.tick + currentTick
+      });
+    }
 
-    bass.addNotesToTrack(track, offsetNotes, TICKS_PER_BEAT);
-
-    // Calculate section duration
-    const sectionDuration = section.chords.reduce((sum, c) => sum + (c.duration || 4), 0);
-    currentTick += sectionDuration * TICKS_PER_BEAT;
+    // Use declared bars for consistent timing across all instruments
+    currentTick += section.bars * 4 * TICKS_PER_BEAT;
   }
+
+  // Add all notes at once to get correct delta times
+  bass.addNotesToTrack(track, allNotes, TICKS_PER_BEAT);
 
   return track;
 }
@@ -170,6 +173,7 @@ function generateBassForSong(song, variant = 'standard') {
 function generateDrumsForSong(song, variant = 'standard') {
   const track = drums.createDrumsTrack();
   let currentTick = 0;
+  const allHits = []; // Collect all hits first
 
   for (const section of song.sections) {
     const bars = section.bars;
@@ -209,16 +213,19 @@ function generateDrumsForSong(song, variant = 'standard') {
       });
     }
 
-    // Offset hits by current position
-    const offsetHits = hits.map(hit => ({
-      ...hit,
-      tick: hit.tick + currentTick
-    }));
-
-    drums.addDrumHitsToTrack(track, offsetHits, TICKS_PER_BEAT);
+    // Offset hits by current position and collect
+    for (const hit of hits) {
+      allHits.push({
+        ...hit,
+        tick: hit.tick + currentTick
+      });
+    }
 
     currentTick += bars * 4 * TICKS_PER_BEAT;
   }
+
+  // Add all hits at once to get correct delta times
+  drums.addDrumHitsToTrack(track, allHits, TICKS_PER_BEAT);
 
   return track;
 }
@@ -232,6 +239,7 @@ function generateDrumsForSong(song, variant = 'standard') {
 function generateKeyboardForSong(song, variant = 'standard') {
   const track = keyboard.createKeyboardTrack();
   let currentTick = 0;
+  const allNotes = []; // Collect all notes first
 
   for (const section of song.sections) {
     // Skip drums-only sections
@@ -275,18 +283,20 @@ function generateKeyboardForSong(song, variant = 'standard') {
       });
     }
 
-    // Offset notes
-    const offsetNotes = notes.map(note => ({
-      ...note,
-      tick: note.tick + currentTick
-    }));
+    // Offset notes and collect
+    for (const note of notes) {
+      allNotes.push({
+        ...note,
+        tick: note.tick + currentTick
+      });
+    }
 
-    keyboard.addNotesToTrack(track, offsetNotes, TICKS_PER_BEAT);
-
-    // Calculate section duration
-    const sectionDuration = section.chords.reduce((sum, c) => sum + (c.duration || 4), 0);
-    currentTick += sectionDuration * TICKS_PER_BEAT;
+    // Use declared bars for consistent timing across all instruments
+    currentTick += section.bars * 4 * TICKS_PER_BEAT;
   }
+
+  // Add all notes at once to get correct delta times
+  keyboard.addNotesToTrack(track, allNotes, TICKS_PER_BEAT);
 
   return track;
 }
@@ -300,6 +310,7 @@ function generateKeyboardForSong(song, variant = 'standard') {
 function generateGuitarForSong(song, variant = 'standard') {
   const track = guitar.createGuitarTrack();
   let currentTick = 0;
+  const allNotes = []; // Collect all notes first
 
   for (const section of song.sections) {
     // Skip drums-only sections
@@ -315,8 +326,7 @@ function generateGuitarForSong(song, variant = 'standard') {
 
     // Skip intro (let piano lead)
     if (section.name === 'intro') {
-      const sectionDuration = section.chords.reduce((sum, c) => sum + (c.duration || 4), 0);
-      currentTick += sectionDuration * TICKS_PER_BEAT;
+      currentTick += section.bars * 4 * TICKS_PER_BEAT;
       continue;
     }
 
@@ -337,18 +347,20 @@ function generateGuitarForSong(song, variant = 'standard') {
       notes = guitar.generateRhythmGuitar(section.chords, baseOptions);
     }
 
-    // Offset notes
-    const offsetNotes = notes.map(note => ({
-      ...note,
-      tick: note.tick + currentTick
-    }));
+    // Offset notes and collect
+    for (const note of notes) {
+      allNotes.push({
+        ...note,
+        tick: note.tick + currentTick
+      });
+    }
 
-    guitar.addNotesToTrack(track, offsetNotes, TICKS_PER_BEAT);
-
-    // Calculate section duration
-    const sectionDuration = section.chords.reduce((sum, c) => sum + (c.duration || 4), 0);
-    currentTick += sectionDuration * TICKS_PER_BEAT;
+    // Use declared bars for consistent timing across all instruments
+    currentTick += section.bars * 4 * TICKS_PER_BEAT;
   }
+
+  // Add all notes at once to get correct delta times
+  guitar.addNotesToTrack(track, allNotes, TICKS_PER_BEAT);
 
   return track;
 }
@@ -372,6 +384,7 @@ function extractRootFromKey(key) {
 function generateSaxophoneForSong(song, variant = 'standard') {
   const track = saxophone.createSaxophoneTrack({ type: 'tenor' });
   let currentTick = 0;
+  const allNotes = []; // Collect all notes first
 
   // Extract just the root note from the key (e.g., "Em" -> "E")
   const rootNote = extractRootFromKey(song.key);
@@ -393,7 +406,7 @@ function generateSaxophoneForSong(song, variant = 'standard') {
     let notes = [];
 
     if (section.saxFill || section.name === 'interlude') {
-      // Generate melodic fill
+      // Generate melodic fill (notes have absolute ticks via startTick)
       notes = saxophone.generateFill(rootNote, song.isMinor, sectionDuration, {
         velocity: section.dynamics || 'mf',
         swing: song.swing,
@@ -402,20 +415,20 @@ function generateSaxophoneForSong(song, variant = 'standard') {
         density: 'medium'
       });
     } else if (section.saxMelody) {
-      // Generate chord tone melody for choruses
+      // Generate chord tone melody for choruses (notes have relative ticks)
       notes = saxophone.generateChordToneMelody(section.chords, {
         velocity: section.dynamics || 'f',
         swing: song.swing,
         ticksPerBeat: TICKS_PER_BEAT,
         octave: 4
       });
-      // Offset notes
+      // Offset notes to absolute ticks
       notes = notes.map(note => ({
         ...note,
         tick: note.tick + currentTick
       }));
     } else if (section.name === 'outro') {
-      // Long tones for outro
+      // Long tones for outro (notes have absolute ticks via startTick)
       const outroNote = `${rootNote}4`;
       notes = saxophone.generateLongTones([outroNote], sectionDuration, {
         velocity: section.dynamics || 'mf',
@@ -436,11 +449,16 @@ function generateSaxophoneForSong(song, variant = 'standard') {
       }
     }
 
-    if (notes.length > 0) {
-      saxophone.addNotesToTrack(track, notes, TICKS_PER_BEAT);
-    }
+    // Collect notes (all should have absolute ticks now)
+    allNotes.push(...notes);
 
-    currentTick += sectionDuration * TICKS_PER_BEAT;
+    // Use declared bars for consistent timing across all instruments
+    currentTick += section.bars * 4 * TICKS_PER_BEAT;
+  }
+
+  // Add all notes at once to get correct delta times
+  if (allNotes.length > 0) {
+    saxophone.addNotesToTrack(track, allNotes, TICKS_PER_BEAT);
   }
 
   return track;

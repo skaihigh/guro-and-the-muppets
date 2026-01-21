@@ -48,15 +48,15 @@ const song = {
       bars: 8,
       dynamics: 'mf',
       chords: [
-        { name: 'Gmaj7', duration: 2 },
-        { name: 'G#dim7', duration: 2 },
-        { name: 'Am7', duration: 4 },
+        { name: 'Gmaj7', duration: 4 },
+        { name: 'G#dim7', duration: 4 },
         { name: 'Am7', duration: 2 },
         { name: 'D7', duration: 2 },
         { name: 'Em7', duration: 4 },
         { name: 'C#m7b5', duration: 2 },
         { name: 'F#7', duration: 2 },
         { name: 'Bm7', duration: 4 },
+        { name: 'E7', duration: 4 },
         { name: 'B7', duration: 4 }
       ]
     },
@@ -94,10 +94,10 @@ const song = {
       dynamics: 'mf',
       dynamicsEnd: 'f',
       chords: [
-        { name: 'Am7', duration: 2 },
-        { name: 'Cmaj7', duration: 2 },
-        { name: 'Am7', duration: 2 },
-        { name: 'Em', duration: 2 },
+        { name: 'Am7', duration: 4 },
+        { name: 'Cmaj7', duration: 4 },
+        { name: 'Am7', duration: 4 },
+        { name: 'Em', duration: 4 },
         { name: 'C#m7b5', duration: 4 },
         { name: 'F#7b9', duration: 4 },
         { name: 'Bm7', duration: 4 },
@@ -199,7 +199,7 @@ function getTotalBars() {
  * @param {number} ticksPerBeat - Resolution
  * @returns {number} Total ticks
  */
-function getTotalTicks(ticksPerBeat = 480) {
+function getTotalTicks(ticksPerBeat = 128) {
   const totalBars = getTotalBars();
   return totalBars * 4 * ticksPerBeat; // 4/4 time
 }

@@ -169,7 +169,8 @@ const song = {
         { name: 'E7#9', duration: 4 },
         { name: 'Am9', duration: 4 },
         { name: 'D9', duration: 4 },
-        { name: 'Gmaj7', duration: 4 }
+        { name: 'Gmaj7', duration: 4 },
+        { name: 'D7', duration: 4 }
       ]
     },
     {
@@ -224,7 +225,8 @@ const song = {
         { name: 'Gmaj9', duration: 4 },
         { name: 'Am7', duration: 2 },
         { name: 'D7', duration: 2 },
-        { name: 'Gmaj7', duration: 4, hold: true }
+        { name: 'Gmaj7', duration: 4 },
+        { name: 'G6', duration: 4, hold: true }
       ]
     }
   ],
@@ -289,7 +291,7 @@ function getTotalBars() {
  * @param {number} ticksPerBeat - Resolution
  * @returns {number} Total ticks
  */
-function getTotalTicks(ticksPerBeat = 480) {
+function getTotalTicks(ticksPerBeat = 128) {
   const totalBars = getTotalBars();
   return totalBars * 4 * ticksPerBeat; // 4/4 time
 }

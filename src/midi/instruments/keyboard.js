@@ -133,7 +133,7 @@ function generateComping(chords, options = {}) {
     octave = 4,
     velocity = 'mf',
     swing = 'triplet',
-    ticksPerBeat = 480,
+    ticksPerBeat = 128,
     pattern = 'quarter' // 'quarter', 'charleston', 'sparse'
   } = options;
 
@@ -207,7 +207,7 @@ function generateStrideLeftHand(chords, options = {}) {
     octave = 2,
     velocity = 'mf',
     swing = 'triplet',
-    ticksPerBeat = 480
+    ticksPerBeat = 128
   } = options;
 
   const notes = [];
@@ -257,7 +257,7 @@ function generateStrideLeftHand(chords, options = {}) {
  * @param {Object[]} notes - Array of note objects
  * @param {number} ticksPerBeat - Resolution
  */
-function addNotesToTrack(track, notes, ticksPerBeat = 480) {
+function addNotesToTrack(track, notes, ticksPerBeat = 128) {
   // Group notes by tick for chords
   const notesByTick = {};
   for (const note of notes) {
@@ -274,7 +274,11 @@ function addNotesToTrack(track, notes, ticksPerBeat = 480) {
 
   for (const tick of sortedTicks) {
     const chordNotes = notesByTick[tick];
-    const wait = tick - lastTick;
+
+    // Add micro-timing humanization (±2% of beat)
+    const humanize = Math.round((Math.random() - 0.5) * ticksPerBeat * 0.04);
+    const adjustedTick = Math.max(0, tick + humanize);
+    const wait = adjustedTick - lastTick;
 
     const pitches = chordNotes.map(n => n.pitch);
     const avgVelocity = Math.round(chordNotes.reduce((sum, n) => sum + n.velocity, 0) / chordNotes.length);
@@ -291,7 +295,7 @@ function addNotesToTrack(track, notes, ticksPerBeat = 480) {
     });
 
     track.addEvent(noteEvent);
-    lastTick = tick;
+    lastTick = adjustedTick;
   }
 }
 

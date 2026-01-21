@@ -126,7 +126,7 @@ function generateRhythmGuitar(chords, options = {}) {
     octave = 3,
     velocity = 'mf',
     swing = 'triplet',
-    ticksPerBeat = 480,
+    ticksPerBeat = 128,
     accentOnBackbeat = true
   } = options;
 
@@ -148,15 +148,19 @@ function generateRhythmGuitar(chords, options = {}) {
         ? baseVelocity + 10
         : baseVelocity - 10;
 
-      // Shorter duration on backbeats for "muted" effect
+      // Freddie Green style: shorter on backbeats but not too short
+      // 70% for backbeats (punchy), 90% for downbeats (fuller sound)
       const duration = isBackbeat
-        ? Math.round(ticksPerBeat * 0.3)  // Short, muted
-        : Math.round(ticksPerBeat * 0.7); // Slightly longer
+        ? Math.round(ticksPerBeat * 0.7)  // Punchy but not choppy
+        : Math.round(ticksPerBeat * 0.9); // Fuller legato feel
+
+      // Add micro-timing humanization (±2% of beat)
+      const humanize = Math.round((Math.random() - 0.5) * ticksPerBeat * 0.04);
 
       for (const note of voicing) {
         notes.push({
           pitch: note,
-          tick: currentTick + tick,
+          tick: currentTick + tick + humanize,
           duration,
           velocity: varyVelocity(beatVelocity, 5),
           channel: GUITAR_CHANNEL
@@ -182,7 +186,7 @@ function generateVekselbasStyle(chords, options = {}) {
     octave = 3,
     velocity = 'mf',
     swing = 'triplet',
-    ticksPerBeat = 480
+    ticksPerBeat = 128
   } = options;
 
   const notes = [];
@@ -199,12 +203,14 @@ function generateVekselbasStyle(chords, options = {}) {
     for (const beat of beats) {
       if (beat < beatsInChord) {
         const tick = calculateSwungTick(0, beat, ticksPerBeat, 4, swing);
+        // Add micro-timing humanization (±2% of beat)
+        const humanize = Math.round((Math.random() - 0.5) * ticksPerBeat * 0.04);
 
         for (const note of voicing) {
           notes.push({
             pitch: note,
-            tick: currentTick + tick,
-            duration: Math.round(ticksPerBeat * 0.4),
+            tick: currentTick + tick + humanize,
+            duration: Math.round(ticksPerBeat * 0.85), // Fuller sound
             velocity: varyVelocity(baseVelocity, 5),
             channel: GUITAR_CHANNEL
           });
@@ -224,7 +230,7 @@ function generateVekselbasStyle(chords, options = {}) {
  * @param {Object[]} notes - Array of note objects
  * @param {number} ticksPerBeat - Resolution
  */
-function addNotesToTrack(track, notes, ticksPerBeat = 480) {
+function addNotesToTrack(track, notes, ticksPerBeat = 128) {
   const notesByTick = {};
   for (const note of notes) {
     if (!notesByTick[note.tick]) {

@@ -60,7 +60,7 @@ function generateFill(key, isMinor, beats, options = {}) {
     octave = 4,
     velocity = 'mf',
     swing = 'triplet',
-    ticksPerBeat = 480,
+    ticksPerBeat = 128,
     startTick = 0,
     density = 'medium' // 'sparse', 'medium', 'dense'
   } = options;
@@ -116,7 +116,7 @@ function generateFill(key, isMinor, beats, options = {}) {
 function generateLongTones(notePitches, beats, options = {}) {
   const {
     velocity = 'mp',
-    ticksPerBeat = 480,
+    ticksPerBeat = 128,
     startTick = 0
   } = options;
 
@@ -142,7 +142,7 @@ function generateChordToneMelody(chords, options = {}) {
     octave = 4,
     velocity = 'mf',
     swing = 'triplet',
-    ticksPerBeat = 480
+    ticksPerBeat = 128
   } = options;
 
   const notes = [];
@@ -225,13 +225,16 @@ function transposeForInstrument(notes, instrument = 'tenor') {
  * @param {Object[]} notes - Array of note objects
  * @param {number} ticksPerBeat - Resolution
  */
-function addNotesToTrack(track, notes, ticksPerBeat = 480) {
+function addNotesToTrack(track, notes, ticksPerBeat = 128) {
   const sortedNotes = [...notes].sort((a, b) => a.tick - b.tick);
 
   let lastTick = 0;
 
   for (const note of sortedNotes) {
-    const wait = note.tick - lastTick;
+    // Add micro-timing humanization (±3% for sax - more expressive)
+    const humanize = Math.round((Math.random() - 0.5) * ticksPerBeat * 0.06);
+    const adjustedTick = Math.max(0, note.tick + humanize);
+    const wait = adjustedTick - lastTick;
 
     const waitNotation = wait > 0 ? `T${wait}` : '0';
 
@@ -244,7 +247,7 @@ function addNotesToTrack(track, notes, ticksPerBeat = 480) {
     });
 
     track.addEvent(noteEvent);
-    lastTick = note.tick;
+    lastTick = adjustedTick;
   }
 }
 
