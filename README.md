@@ -2,6 +2,17 @@
 
 AI-powered swing jazz arrangement generator for transforming songs into 1920s-1950s Lindy Hop style.
 
+---
+
+## Quick Links - Songs
+
+| Song | Markdown | PDF |
+|------|----------|-----|
+| Vårherres Klinkekule (Em) | [songs/vaarherres-klinkekule/](songs/vaarherres-klinkekule/) | [output/pdf/vaarherres-klinkekule/](output/pdf/vaarherres-klinkekule/) |
+| Crescendo i gågata (G) | [songs/crescendo-i-gagata/](songs/crescendo-i-gagata/) | [output/pdf/crescendo-i-gagata/](output/pdf/crescendo-i-gagata/) |
+
+---
+
 ## Project Structure
 
 ```
@@ -28,7 +39,7 @@ AI-powered swing jazz arrangement generator for transforming songs into 1920s-19
 
 ### Vårherres Klinkekule
 - **Original**: Erik Bye / Finn Luth
-- **Key**: E♭ minor (transposed for vocalist)
+- **Key**: E minor (original key)
 - **Tempo**: 130-140 BPM
 - **Features**: Gene Krupa drum break
 
