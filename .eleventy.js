@@ -1,6 +1,6 @@
 module.exports = function(eleventyConfig) {
-  // Base URL for GitHub Pages (repository name)
-  const pathPrefix = process.env.ELEVENTY_ENV === 'production' ? '/guro-and-the-muppets' : '';
+  // Base URL - empty for custom domain, subdirectory for github.io
+  const pathPrefix = '';
 
   // Add global data for path prefix
   eleventyConfig.addGlobalData("baseUrl", pathPrefix);
@@ -10,6 +10,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/js");
   eleventyConfig.addPassthroughCopy("site/midi");
   eleventyConfig.addPassthroughCopy("site/downloads");
+  eleventyConfig.addPassthroughCopy("site/CNAME");
 
   // Add markdown filter for rendering markdown in templates
   const markdownIt = require("markdown-it");
