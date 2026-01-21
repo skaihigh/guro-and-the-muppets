@@ -1,0 +1,21 @@
+{
+  "name": "guro-and-the-muppets-music-generator",
+  "version": "1.0.0",
+  "description": "Swing jazz arrangement generator for Guro and the Muppets band",
+  "scripts": {
+    "generate-pdf": "bash scripts/generate-pdfs.sh",
+    "pdf:test": "npx md-to-pdf songs/vaarherres-klinkekule/README.md"
+  },
+  "keywords": [
+    "music",
+    "swing",
+    "jazz",
+    "arrangement",
+    "lindy-hop"
+  ],
+  "author": "Guro and the Muppets",
+  "license": "MIT",
+  "devDependencies": {
+    "md-to-pdf": "^5.2.5"
+  }
+}

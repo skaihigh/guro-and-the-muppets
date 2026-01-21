@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Output files
+output/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# PDF files in song folders (generated, should be in output/)
+songs/**/*.pdf
