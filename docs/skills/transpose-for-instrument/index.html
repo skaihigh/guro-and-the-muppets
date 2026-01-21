@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transpose For Instrument | Guro and the Muppets</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.77,npm/@magenta/music@1.23.1/es6/core.js,npm/html-midi-player@1.5.0"></script>
+</head>
+<body>
+  <header class="site-header">
+  <nav class="container">
+    <a href="/" class="logo">Guro and the Muppets</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li class="dropdown">
+        <a href="/songs/">Songs</a>
+        <ul class="dropdown-menu">
+          <li><a href="/songs/vaarherres-klinkekule/">Vaarherres Klinkekule</a></li>
+          <li><a href="/songs/crescendo-i-gagata/">Crescendo i Gagata</a></li>
+        </ul>
+      </li>
+      <li><a href="/knowledge/">Knowledge Base</a></li>
+      <li><a href="/agents/">Agents</a></li>
+      <li><a href="/skills/">Skills</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <main class="container">
+    <h1>Skill: Transpose for Instrument</h1>
+<h2>Command</h2>
+<p><code>/transpose</code></p>
+<h2>Description</h2>
+<p>Transposes music from concert pitch to the appropriate key for each instrument in the band.</p>
+<h2>Usage</h2>
+<pre><code>/transpose [from_key] to [target_key] for [instrument]
+</code></pre>
+<h2>Supported Instruments</h2>
+<h3>Concert Pitch (No transposition)</h3>
+<ul>
+<li>Piano/Keyboard</li>
+<li>Guitar</li>
+<li>Bass (sounds octave lower, but written at pitch)</li>
+<li>Vocals</li>
+</ul>
+<h3>Transposing Instruments</h3>
+<h4>Alto Saxophone (E♭)</h4>
+<ul>
+<li>Concert C = Written A</li>
+<li>Add 3 sharps (or remove 3 flats)</li>
+<li>Write a Major 6th higher</li>
+</ul>
+<h4>Tenor Saxophone (B♭)</h4>
+<ul>
+<li>Concert C = Written D</li>
+<li>Add 2 sharps (or remove 2 flats)</li>
+<li>Write a Major 2nd higher (+ octave)</li>
+</ul>
+<h2>Quick Reference Tables</h2>
+<h3>Concert to Alto Sax</h3>
+<table>
+<thead>
+<tr>
+<th>Concert</th>
+<th>Alto Written</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C</td>
+<td>A</td>
+</tr>
+<tr>
+<td>D</td>
+<td>B</td>
+</tr>
+<tr>
+<td>E♭</td>
+<td>C</td>
+</tr>
+<tr>
+<td>E</td>
+<td>C#</td>
+</tr>
+<tr>
+<td>F</td>
+<td>D</td>
+</tr>
+<tr>
+<td>G</td>
+<td>E</td>
+</tr>
+<tr>
+<td>A</td>
+<td>F#</td>
+</tr>
+<tr>
+<td>B♭</td>
+<td>G</td>
+</tr>
+</tbody>
+</table>
+<h3>Concert to Tenor Sax</h3>
+<table>
+<thead>
+<tr>
+<th>Concert</th>
+<th>Tenor Written</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C</td>
+<td>D</td>
+</tr>
+<tr>
+<td>D</td>
+<td>E</td>
+</tr>
+<tr>
+<td>E♭</td>
+<td>F</td>
+</tr>
+<tr>
+<td>E</td>
+<td>F#</td>
+</tr>
+<tr>
+<td>F</td>
+<td>G</td>
+</tr>
+<tr>
+<td>G</td>
+<td>A</td>
+</tr>
+<tr>
+<td>A</td>
+<td>B</td>
+</tr>
+<tr>
+<td>B♭</td>
+<td>C</td>
+</tr>
+</tbody>
+</table>
+<h2>Example Usage</h2>
+<pre><code>User: /transpose E♭m to tenor sax
+
+Agent:
+Concert key: E♭m
+Tenor sax written key: Fm
+
+Chord transpositions:
+- E♭m → Fm
+- A♭m → B♭m
+- D♭7 → E♭7
+- G♭maj7 → A♭maj7
+- B♭7 → C7
+- F7 → G7
+</code></pre>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Guro and the Muppets. Swing jazz arrangements for lindy hop.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

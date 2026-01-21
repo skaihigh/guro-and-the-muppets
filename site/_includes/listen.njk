@@ -1,0 +1,70 @@
+---
+layout: base.njk
+---
+
+<article class="listen-page">
+  <nav class="breadcrumb">
+    <a href="/">Home</a> &raquo;
+    <a href="/songs/">Songs</a> &raquo;
+    <a href="/songs/{{ slug }}/">{{ title }}</a> &raquo;
+    <span>Listen</span>
+  </nav>
+
+  <header class="listen-header">
+    <h1>Listen: {{ title }}</h1>
+    <p>MIDI playback of the swing jazz arrangement</p>
+  </header>
+
+  <section class="midi-section">
+    <div class="midi-player-container full-band">
+      <h2>Full Band</h2>
+      <midi-player src="/midi/{{ slug }}/full-band.mid" sound-font visualizer="#full-band-viz"></midi-player>
+      <midi-visualizer type="piano-roll" id="full-band-viz" src="/midi/{{ slug }}/full-band.mid"></midi-visualizer>
+    </div>
+
+    <div class="instruments-section">
+      <h2>Individual Instruments</h2>
+      <p class="section-intro">Click to expand and listen to each instrument track separately.</p>
+
+      <details class="instrument-player">
+        <summary>Keyboard</summary>
+        <midi-player src="/midi/{{ slug }}/keyboard.mid" sound-font></midi-player>
+        <a href="/songs/{{ slug }}/keyboard/" class="view-docs">View keyboard documentation &rarr;</a>
+      </details>
+
+      <details class="instrument-player">
+        <summary>Bass</summary>
+        <midi-player src="/midi/{{ slug }}/bass.mid" sound-font></midi-player>
+        <a href="/songs/{{ slug }}/bass/" class="view-docs">View bass documentation &rarr;</a>
+      </details>
+
+      <details class="instrument-player">
+        <summary>Guitar</summary>
+        <midi-player src="/midi/{{ slug }}/guitar.mid" sound-font></midi-player>
+        <a href="/songs/{{ slug }}/guitar/" class="view-docs">View guitar documentation &rarr;</a>
+      </details>
+
+      <details class="instrument-player">
+        <summary>Drums</summary>
+        <midi-player src="/midi/{{ slug }}/drums.mid" sound-font></midi-player>
+        <a href="/songs/{{ slug }}/drums/" class="view-docs">View drums documentation &rarr;</a>
+      </details>
+
+      <details class="instrument-player">
+        <summary>Saxophone</summary>
+        <midi-player src="/midi/{{ slug }}/saxophone.mid" sound-font></midi-player>
+        <a href="/songs/{{ slug }}/saxophone/" class="view-docs">View saxophone documentation &rarr;</a>
+      </details>
+    </div>
+  </section>
+
+  <section class="download-section">
+    <h2>Download</h2>
+    <p>Get all MIDI files and sheet music in one package.</p>
+    <a href="/downloads/{{ slug }}.zip" class="btn btn-primary" download>Download Complete Package (ZIP)</a>
+  </section>
+
+  <nav class="listen-nav">
+    <a href="/songs/{{ slug }}/" class="btn">&larr; Back to Arrangement</a>
+  </nav>
+</article>

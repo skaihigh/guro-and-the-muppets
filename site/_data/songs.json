@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Vaarherres Klinkekule",
+    "slug": "vaarherres-klinkekule",
+    "key": "E minor",
+    "tempo": "130-140 BPM (medium swing)",
+    "original": "Erik Bye (tekst) / Finn Luth (melodi)",
+    "description": "A classic Norwegian song transformed into swing jazz, perfect for lindy hop.",
+    "instruments": ["keyboard", "bass", "guitar", "drums", "saxophone", "vocals"]
+  },
+  {
+    "title": "Crescendo i Gagata",
+    "slug": "crescendo-i-gagata",
+    "key": "G major / E minor",
+    "tempo": "130-140 BPM (medium swing)",
+    "original": "Lillebjorn Nilsen",
+    "description": "Features Beethoven's Ode to Joy in the chorus. A swing arrangement with major/minor contrast.",
+    "instruments": ["keyboard", "bass", "guitar", "drums", "saxophone", "vocals"]
+  }
+]

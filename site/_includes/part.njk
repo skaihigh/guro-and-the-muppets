@@ -1,0 +1,48 @@
+---
+layout: base.njk
+---
+
+<article class="part-page">
+  <nav class="breadcrumb">
+    <a href="/">Home</a> &raquo;
+    <a href="/songs/">Songs</a> &raquo;
+    <a href="/songs/{{ song }}/">{{ songTitle }}</a> &raquo;
+    <span>{{ title }}</span>
+  </nav>
+
+  <header class="part-header">
+    <h1>{{ title }}</h1>
+    <p class="song-link">From: <a href="/songs/{{ song }}/">{{ songTitle }}</a></p>
+  </header>
+
+  <section class="content-section documentation">
+    {{ content | safe }}
+  </section>
+
+  <aside class="part-sidebar">
+    <div class="sidebar-section">
+      <h3>Other Parts</h3>
+      <ul class="part-links">
+        <li><a href="/songs/{{ song }}/full-score/">Full Score</a></li>
+        <li><a href="/songs/{{ song }}/keyboard/">Keyboard</a></li>
+        <li><a href="/songs/{{ song }}/bass/">Bass</a></li>
+        <li><a href="/songs/{{ song }}/guitar/">Guitar</a></li>
+        <li><a href="/songs/{{ song }}/drums/">Drums</a></li>
+        <li><a href="/songs/{{ song }}/saxophone/">Saxophone</a></li>
+        <li><a href="/songs/{{ song }}/vocals/">Vocals</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>Resources</h3>
+      <ul class="resource-links">
+        <li><a href="/songs/{{ song }}/listen/">Listen (MIDI)</a></li>
+        <li><a href="/downloads/{{ song }}.zip" download>Download Package</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <nav class="part-nav">
+    <a href="/songs/{{ song }}/" class="btn">&larr; Back to {{ songTitle }}</a>
+  </nav>
+</article>

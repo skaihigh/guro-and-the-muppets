@@ -4,7 +4,13 @@
   "description": "Swing jazz arrangement generator for Guro and the Muppets band",
   "scripts": {
     "generate-pdf": "bash scripts/generate-pdfs.sh",
-    "pdf:test": "npx md-to-pdf songs/vaarherres-klinkekule/README.md"
+    "pdf:test": "npx md-to-pdf songs/vaarherres-klinkekule/README.md",
+    "generate-midi": "node src/scripts/generate-midi.js",
+    "generate-midi:vekselbass": "node src/scripts/generate-midi.js --variants=standard,vekselbass",
+    "build:site": "node src/scripts/build-site.js",
+    "serve": "npx @11ty/eleventy --serve",
+    "serve:only": "npx @11ty/eleventy --serve --input=site --output=docs",
+    "deploy": "npm run build:site"
   },
   "keywords": [
     "music",
@@ -16,6 +22,12 @@
   "author": "Guro and the Muppets",
   "license": "MIT",
   "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "archiver": "^7.0.1",
+    "markdown-it": "^14.1.0",
     "md-to-pdf": "^5.2.5"
+  },
+  "dependencies": {
+    "midi-writer-js": "^3.1.1"
   }
 }

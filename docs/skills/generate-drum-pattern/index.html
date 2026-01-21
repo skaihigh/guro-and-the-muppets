@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Drum Pattern | Guro and the Muppets</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.77,npm/@magenta/music@1.23.1/es6/core.js,npm/html-midi-player@1.5.0"></script>
+</head>
+<body>
+  <header class="site-header">
+  <nav class="container">
+    <a href="/" class="logo">Guro and the Muppets</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li class="dropdown">
+        <a href="/songs/">Songs</a>
+        <ul class="dropdown-menu">
+          <li><a href="/songs/vaarherres-klinkekule/">Vaarherres Klinkekule</a></li>
+          <li><a href="/songs/crescendo-i-gagata/">Crescendo i Gagata</a></li>
+        </ul>
+      </li>
+      <li><a href="/knowledge/">Knowledge Base</a></li>
+      <li><a href="/agents/">Agents</a></li>
+      <li><a href="/skills/">Skills</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <main class="container">
+    <h1>Skill: Generate Drum Pattern</h1>
+<h2>Command</h2>
+<p><code>/drum-pattern</code></p>
+<h2>Description</h2>
+<p>Genererer swing jazz trommepatterns, fills og arrangement-forslag.</p>
+<h2>Usage</h2>
+<pre><code>/drum-pattern [tempo] [stil] [seksjon]
+</code></pre>
+<h3>Parametere</h3>
+<ul>
+<li><strong>tempo</strong>: BPM (typisk 110-190 for Lindy Hop)</li>
+<li><strong>stil</strong>: <code>jo-jones</code> | <code>gene-krupa</code> | <code>brush</code> | <code>basic</code></li>
+<li><strong>seksjon</strong>: <code>intro</code> | <code>vers</code> | <code>chorus</code> | <code>solo</code> | <code>shout</code> | <code>break</code> | <code>outro</code></li>
+</ul>
+<h2>Output</h2>
+<h3>Basic Pattern Output</h3>
+<pre><code>Tempo: [X] BPM
+Stil: [navn]
+Seksjon: [type]
+
+PATTERN:
+    1   +   2   +   3   +   4   +
+R:  [ride]
+HH: [hi-hat foot]
+S:  [snare]
+B:  [bass drum]
+
+DYNAMIKK: [pp-ff]
+TIPS: [kontekst-spesifikke råd]
+</code></pre>
+<h3>Fill Output</h3>
+<pre><code>FILL ([lengde] takter):
+    1   +   2   +   3   +   4   +
+    [notasjon]
+
+BRUK: [når og hvordan]
+</code></pre>
+<h2>Eksempler</h2>
+<h3>Eksempel 1: Basic Swing</h3>
+<pre><code>User: /drum-pattern 140 basic vers
+
+Output:
+Tempo: 140 BPM
+Stil: Basic Swing
+Seksjon: Vers
+
+    1   +   2   +   3   +   4   +
+R:  X   .   X   X   X   .   X   X
+HH: .   .   X   .   .   .   X   .
+S:  .   .   .   .   .   .   .   .
+B:  X   .   .   .   .   .   .   .
+
+DYNAMIKK: mf
+TIPS: Hold steady, støtt vokalisten
+</code></pre>
+<h3>Eksempel 2: Gene Krupa Break</h3>
+<pre><code>User: /drum-pattern 135 gene-krupa break
+
+Output:
+Tempo: 135 BPM
+Stil: Gene Krupa
+Seksjon: Break (4 takter solo)
+
+TAKT 1 (pp):
+FT: X   .   X   .   X   .   X   X
+
+TAKT 2 (p):
+FT: X   .   X   .   X   .   X   X
+    dum     dum     dum     dum-dum
+
+TAKT 3 (mp):
+    X   X   X   X   X   X   X   X
+
+TAKT 4 (f → CRASH):
+    X   X   X   X   X   X   X   CRASH!
+
+TIPS: Bygg intensitet! Band kommer inn på crash.
+</code></pre>
+<h3>Eksempel 3: Brush Ballad</h3>
+<pre><code>User: /drum-pattern 90 brush intro
+
+Output:
+Tempo: 90 BPM
+Stil: Brushes
+Seksjon: Intro
+
+    1   +   2   +   3   +   4   +
+LH: ~~~~~~~~~~~~~~~~~~~~~~~~~~~ (sweep)
+RH: .   .   tap .   .   .   tap .
+HH: .   .   X   .   .   .   X   .
+
+DYNAMIKK: pp-p
+TIPS: Mykt og intimt, sett stemningen
+</code></pre>
+<h2>Lindy Hop Tempo Guide</h2>
+<table>
+<thead>
+<tr>
+<th>Tempo</th>
+<th>Beskrivelse</th>
+<th>Anbefalt Stil</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>110-130</td>
+<td>Slow swing</td>
+<td>Brush eller lett</td>
+</tr>
+<tr>
+<td>130-160</td>
+<td>Medium (sweet spot)</td>
+<td>Basic eller Jo Jones</td>
+</tr>
+<tr>
+<td>160-190</td>
+<td>Fast</td>
+<td>Energisk, Gene Krupa</td>
+</tr>
+<tr>
+<td>190+</td>
+<td>Balboa territory</td>
+<td>Forenklet, hi-hat fokus</td>
+</tr>
+</tbody>
+</table>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Guro and the Muppets. Swing jazz arrangements for lindy hop.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>

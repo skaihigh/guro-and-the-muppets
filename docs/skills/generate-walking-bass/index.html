@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Walking Bass | Guro and the Muppets</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.77,npm/@magenta/music@1.23.1/es6/core.js,npm/html-midi-player@1.5.0"></script>
+</head>
+<body>
+  <header class="site-header">
+  <nav class="container">
+    <a href="/" class="logo">Guro and the Muppets</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li class="dropdown">
+        <a href="/songs/">Songs</a>
+        <ul class="dropdown-menu">
+          <li><a href="/songs/vaarherres-klinkekule/">Vaarherres Klinkekule</a></li>
+          <li><a href="/songs/crescendo-i-gagata/">Crescendo i Gagata</a></li>
+        </ul>
+      </li>
+      <li><a href="/knowledge/">Knowledge Base</a></li>
+      <li><a href="/agents/">Agents</a></li>
+      <li><a href="/skills/">Skills</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <main class="container">
+    <h1>Skill: Generate Walking Bass Line</h1>
+<h2>Command</h2>
+<p><code>/walking-bass</code></p>
+<h2>Description</h2>
+<p>Creates a walking bass line for any chord progression in swing style.</p>
+<h2>Usage</h2>
+<pre><code>/walking-bass [chord progression] in [key] at [tempo]
+</code></pre>
+<h2>Input Format</h2>
+<p>Chord progression as: <code>| Chord | Chord | Chord | Chord |</code></p>
+<h2>Output Format</h2>
+<pre><code>| Chord    |
+| B1 B2 B3 B4 |  (quarter notes)
+| note note note note |
+</code></pre>
+<h2>Walking Bass Rules Applied</h2>
+<ol>
+<li><strong>Beat 1</strong>: Root or strong chord tone</li>
+<li><strong>Beat 3</strong>: 5th or another chord tone</li>
+<li><strong>Beats 2 &amp; 4</strong>: Passing tones, approach notes</li>
+<li><strong>Beat 4</strong>: Approach to next chord root</li>
+</ol>
+<h2>Approach Types Used</h2>
+<ul>
+<li>Chromatic below (half step up to target)</li>
+<li>Chromatic above (half step down to target)</li>
+<li>Diatonic (scale tone approach)</li>
+<li>Dominant (5th of target chord)</li>
+</ul>
+<h2>Example</h2>
+<pre><code>User: /walking-bass | Dm7 | G7 | Cmaj7 | Cmaj7 | in C
+
+Agent:
+| Dm7           | G7            | Cmaj7         | Cmaj7         |
+| D  F  A  Ab   | G  B  D  Db   | C  E  G  A    | G  E  D  B    |
+  R  3  5  chr    R  3  5  chr    R  3  5  6      5  3  2  7
+
+Legend: R=root, 3=third, 5=fifth, chr=chromatic approach
+</code></pre>
+<h2>Tempo Guidelines</h2>
+<ul>
+<li>Slow (80-110): More space, simpler lines</li>
+<li>Medium (110-150): Standard walking</li>
+<li>Fast (150+): Simplified, root-focused</li>
+</ul>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Guro and the Muppets. Swing jazz arrangements for lindy hop.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
