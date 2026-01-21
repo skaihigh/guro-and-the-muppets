@@ -1,16 +1,19 @@
 # Crescendo i gågata - SAKSOFON
 
-**Concert Pitch**: G major | **Tempo**: 140-150 BPM | **Feel**: Medium-Up Swing
+**Concert Pitch**: G major (vers) / E minor (chorus) | **Tempo**: 130-140 BPM | **Feel**: Medium Swing
+
+**VIKTIG**: Du spiller Ode to Joy melodien på chorus!
 
 ---
 
 ## TRANSPONERING
 
-### For TENOR SAX (B♭ instrument):
-**Skrevet toneart: A major**
+### For TENOR SAX (Bb instrument):
 
-| Concert (G) | Tenor skrevet (A) |
-|-------------|-------------------|
+**Vers (G-dur concert → A-dur skrevet)**
+
+| Concert | Tenor skrevet |
+|---------|---------------|
 | G / Gmaj7 | A / Amaj7 |
 | C / Cmaj7 | D / Dmaj7 |
 | Am / Am7 | Bm / Bm7 |
@@ -18,13 +21,26 @@
 | Em7 | F#m7 |
 | Bm7 | C#m7 |
 | E7 | F#7 |
-| C#dim | D#dim |
 
-### For ALTO SAX (E♭ instrument):
-**Skrevet toneart: E major**
+**Chorus (E-moll concert → F#-moll skrevet)**
 
-| Concert (G) | Alto skrevet (E) |
-|-------------|------------------|
+| Concert | Tenor skrevet |
+|---------|---------------|
+| Em / Em9 | F#m / F#m9 |
+| Am7 | Bm7 |
+| D7 | E7 |
+| Gmaj7 | Amaj7 |
+| B7 / B7#9 | C#7 / C#7#9 |
+| C#m7b5 | D#m7b5 |
+| F#7 | G#7 |
+| Em6 | F#m6 |
+
+### For ALTO SAX (Eb instrument):
+
+**Vers (G-dur concert → E-dur skrevet)**
+
+| Concert | Alto skrevet |
+|---------|--------------|
 | G / Gmaj7 | E / Emaj7 |
 | C / Cmaj7 | A / Amaj7 |
 | Am / Am7 | F#m / F#m7 |
@@ -32,75 +48,112 @@
 | Em7 | C#m7 |
 | Bm7 | G#m7 |
 | E7 | C#7 |
-| C#dim | A#dim |
+
+**Chorus (E-moll concert → C#-moll skrevet)**
+
+| Concert | Alto skrevet |
+|---------|--------------|
+| Em / Em9 | C#m / C#m9 |
+| Am7 | F#m7 |
+| D7 | B7 |
+| Gmaj7 | Emaj7 |
+| B7 / B7#9 | G#7 / G#7#9 |
+| C#m7b5 | A#m7b5 |
+| F#7 | D#7 |
+| Em6 | C#m6 |
 
 ---
 
-## AKKORDPROGRESJON
+## ODE TO JOY MELODI
 
-### Concert (referanse):
+### Concert Pitch (E minor):
 ```
-Vers: | Cmaj7 | Bm7 E7 | Am9 | D13 | Em7 A7 | Am7 D7 | Gmaj9 | G6 |
-Chorus: | Cmaj7 C#dim7 | Gmaj7/D G6 |
-```
-
-### Tenor Sax:
-```
-Vers: | Dmaj7 | C#m7 F#7 | Bm9 | E13 | F#m7 B7 | Bm7 E7 | Amaj9 | A6 |
-Chorus: | Dmaj7 D#dim7 | Amaj7/E A6 |
+Frase 1: G  G  A  B | B  A  G  F# | E  E  F# G | G  F# F# -
+Frase 2: G  G  A  B | B  A  G  F# | E  E  F# G | F# E  E  -
 ```
 
-### Alto Sax:
+### Tenor Sax (F#m skrevet):
 ```
-Vers: | Amaj7 | G#m7 C#7 | F#m9 | B13 | C#m7 F#7 | F#m7 B7 | Emaj9 | E6 |
-Chorus: | Amaj7 A#dim7 | Emaj7/B E6 |
+Frase 1: A  A  B  C# | C# B  A  G# | F# F# G# A | A  G# G# -
+Frase 2: A  A  B  C# | C# B  A  G# | F# F# G# A | G# F# F# -
 ```
+
+### Alto Sax (C#m skrevet):
+```
+Frase 1: E  E  F# G# | G# F# E  D# | C# C# D# E | E  D# D# -
+Frase 2: E  E  F# G# | G# F# E  D# | C# C# D# E | D# C# C# -
+```
+
+**LÆR DENNE MELODIEN - du dobler vokalisten på chorus!**
 
 ---
 
 ## SKALAER FOR FILLS/SOLO
 
-### Concert:
-- G major pentatonisk: G - A - B - D - E
+### Concert Pitch:
+- **Vers (G-dur)**: G major pentatonisk: G - A - B - D - E
+- **Chorus (E-moll)**: E moll pentatonisk: E - G - A - B - D
 
-### Tenor (skrevet):
-- A major pentatonisk: A - B - C# - E - F#
+### Tenor Sax (skrevet):
+- **Vers (A-dur)**: A major pentatonisk: A - B - C# - E - F#
+- **Chorus (F#m)**: F# moll pentatonisk: F# - A - B - C# - E
 
-### Alto (skrevet):
-- E major pentatonisk: E - F# - G# - B - C#
+### Alto Sax (skrevet):
+- **Vers (E-dur)**: E major pentatonisk: E - F# - G# - B - C#
+- **Chorus (C#m)**: C# moll pentatonisk: C# - E - F# - G# - B
 
 ---
 
 ## DIN ROLLE
 
-### Chorus ("La la la"):
-**DU EIER MELODIEN!** Spill "La la la" med vokalisten eller alene.
+### Vers:
+- Fills mellom vokallinjene
+- Hold det enkelt, 2-4 noter
+- Pentatonisk skala
 
-### Fills:
-Mellom vokallinjene - hold det enkelt, 2-4 noter.
+### Chorus - ODE TO JOY:
+**DU SPILLER MELODIEN MED VOKALISTEN!**
+- Doble vokal på Ode to Joy melodien
+- Blend med vokalisten
+- Dette er Beethoven-øyeblikket!
 
 ### Solo-mulighet:
-- Ekstra chorus
-- Bridge
+- Sax solo over Ode to Joy changes (8 takter)
+- Bruk E moll pentatonisk (F#m for tenor, C#m for alto)
 
 ---
 
 ## FORM MED DYNAMIKK
 
-| Del | Dynamikk | Din rolle |
-|-----|----------|-----------|
-| Intro | mp | Lange toner |
-| Vers | mf | Fills |
-| Chorus | f | **MELODI!** |
-| Bridge | mp→f | Fills, bygg |
-| Vers 5 | ff | Full power |
+| Del | Dynamikk | Toneart | Din rolle |
+|-----|----------|---------|-----------|
+| Intro | mp | Em | Lange toner eller vente |
+| Vers 1-2 | mf | G | Fills mellom linjer |
+| Chorus 1 | f | Em | **ODE TO JOY MELODI!** |
+| Vers 3-4 | mf | G | Fills |
+| Chorus 2 | f | Em | **ODE TO JOY MELODI!** |
+| Bridge start | mp | G | Hvile eller lange toner |
+| Bridge slutt | f | →Em | Bygg fills |
+| Sax solo | mf | Em | **DIN SOLO!** |
+| Vers 5 | ff | G | Full power fills |
+| Chorus 3 | f→mp | Em | Melodi, rit. på slutten |
 
 ---
 
-## TIPS
+## VIKTIGE TIPS
 
-1. **"La la la" er din** - ta melodien!
-2. Fills mellom vokallinjer
-3. Solo på bridge eller ekstra chorus
-4. Swing feel - aldri rette 8-deler
-5. Husk transponering!
+1. **Lær Ode to Joy melodien i din toneart!** (Tenor: F#m, Alto: C#m)
+2. **Chorus = du dobler vokal** - lytt og blend!
+3. **Vers = fills** - ikke for mye
+4. **Solo** over Ode to Joy changes er din sjanse!
+5. **Kontrast**: Vers (lyst G-dur) vs Chorus (mørkt Em)
+6. **Swing feel** - aldri rette 8-deler
+
+---
+
+## ØV PÅ DETTE
+
+1. Ode to Joy melodien i din toneart (gjentatte ganger!)
+2. Pentatonisk skala for fills (vers OG chorus)
+3. Overgangen G → Em (føl toneartsbytte)
+4. Blende med vokalisten på chorus

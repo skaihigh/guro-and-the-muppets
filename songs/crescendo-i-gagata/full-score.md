@@ -2,78 +2,77 @@
 
 **Original**: Lillebjørn Nilsen
 **Arrangement**: Guro and the Muppets
-**Key**: G major (original toneart)
-**Tempo**: 140-150 BPM (medium-up swing)
+**Key**: G major (verses) / E minor (chorus - Ode to Joy)
+**Tempo**: 130-140 BPM (medium swing)
 **Feel**: Happy Swing / Lindy Hop
+**Special Feature**: Chorus based on Beethoven's "Ode to Joy"
 
 ---
 
-## ORIGINAL AKKORDER (G-dur)
+## TONEART-KONSEPT
 
-### Vers:
+Denne sangen bruker **major/minor kontrast**:
+- **Vers**: G-dur (lyst, glad, optimistisk)
+- **Chorus**: E-moll (dramatisk, Beethoven-referanse)
+- **Bridge**: Starter i G-dur, bygger til klimaks
+
+Dette passer perfekt med teksten "Beethovens Niendes kor stemt opp!"
+
+---
+
+## ODE TO JOY MELODI (E minor)
+
+### Original Beethoven (transponert til Em):
 ```
-| C | Bm | Am | D7 | G | G |
+Frase 1: G  G  A  B | B  A  G  F# | E  E  F# G | G  F# F# -
+Frase 2: G  G  A  B | B  A  G  F# | E  E  F# G | F# E  E  -
 ```
 
-### Chorus (La la la):
+### Swing-tilpasset rytme:
 ```
-| C | G | C | G |
-```
-
-### Bridge:
-```
-| C  C#dim | Gmaj7 | E7(-9) | Am |
-| D7 |
-| C  C#dim | Gmaj7 | E7(-9) | Am |
-| D7 | G |
+| ♩  ♩  ♩  ♪♪ | ♩  ♩  ♩  ♪♪ |  (swing 8-deler på siste slag)
 ```
 
 ---
 
-## SWING JAZZ REHARMONISERING
+## AKKORDPROGRESJON
 
-### Vers - Swingende versjon:
-```
-Linje 1: "Beethovens Niendes kor stemt opp!"
-| Cmaj7     | Bm7  E7   |
-
-Linje 2: "Sola på himmelen gjorde et hopp."
-| Am9       | D13       |
-
-Linje 3: "Et neonlys blunka to ganger til meg"
-| Em7  A7   | Am7  D7   |
-
-Linje 4: "da du sa: Jeg tror jeg elsker deg..."
-| Gmaj9     | G6  (D7)  |
-```
-
-### Komplett vers reharmonisert:
+### Vers (G-dur):
 ```
 | Cmaj7     | Bm7  E7   | Am9       | D13       |
-| Em7  A7   | Am7  D7   | Gmaj9     | G6  (D7)  |
+| Em7  A7   | Am7  D7   | Gmaj9     | G6   B7   |
+                                          ↑
+                                    pivot til Em
 ```
 
-### Chorus (La la la) - Rhythm Changes style:
+### Chorus - Ode to Joy (E-moll):
 ```
-| Cmaj7 C#dim7 | Gmaj7/D  G6  | Cmaj7 C#dim7 | Gmaj7  D7  |
-| Cmaj7 C#dim7 | Gmaj7/D  G6  | Am7   D7     | Gmaj7 (D7) |
+| Em9       | Am7  D7   | Gmaj7     | B7#9      |
+| Em9       | Am7  D7   | Gmaj7 C#m7b5| F#7  B7 |
 ```
 
-### Bridge - Allerede jazzy, lett forbedret:
+### Chorus Tag (repeat og ut):
+```
+| Em9  C#m7b5| F#7  B7   | Em6       | Em6       |
+```
+
+### Bridge (original, G-dur start):
 ```
 | Cmaj7  C#dim7 | Gmaj9       | E7#9        | Am9        |
 | D13          |
 | Cmaj7  C#dim7 | Gmaj9       | E7#9        | Am9        |
-| D9           | Gmaj7       |
+| D9           | B7          |
+                 ↑
+           pivot til Em chorus
 ```
 
 ---
 
 ## AKKORDER FOR HVERT INSTRUMENT
 
-### KEYBOARD (Piano) - Voicings i G-dur
+### KEYBOARD (Piano)
 
-#### Shell Voicings (Venstre hånd):
+#### Vers Voicings (G-dur):
 ```
 Gmaj7:   G + F# (root + maj7)
 Gmaj9:   G + F# + A (root + maj7 + 9th)
@@ -85,296 +84,271 @@ Am7:     A + G (root + 7th)
 Am9:     A + G + B (root + 7th + 9th)
 D7:      D + C (root + 7th)
 D13:     D + C + B (root + 7th + 13th)
-Em7:     E + D (root + 7th)
-A7:      A + G (root + 7th)
-C#dim7:  C# + E + G + Bb (passing chord)
-E7#9:    E + D + G# (root + 7th + #9 "Hendrix chord")
 ```
 
-#### Høyre hånd fills:
-- G major pentatonisk: G - A - B - D - E
-- G Mixolydian for bluesy feel: G - A - B - C - D - E - F
-- Bruk C#dim som passing chord mellom C og D (klassisk swing!)
+#### Chorus Voicings (E-moll - Ode to Joy):
+```
+Em9:     E + D + F# (root + 7th + 9th)
+Am7:     A + G (root + 7th)
+D7:      D + C (root + 7th)
+Gmaj7:   G + F# (root + maj7)
+B7#9:    B + A + D# (root + 7th + #9) - "Hendrix chord"
+C#m7b5:  C# + B + G (root + 7th + b5)
+F#7:     F# + E (root + 7th)
+Em6:     E + C# (root + 6th)
+```
 
-#### Comping rytme:
-```
-| .   .   .   . |  (kvartnoter, lett)
-eller Charleston:
-| X   .   X . . |  (1 og 2-og)
-```
-
-#### Intro forslag (4 takter):
-```
-| Gmaj9  | Am7  D7 | Gmaj9  | D7#9  |
-  (stride venstre hånd, fills høyre)
-```
+#### Scales for fills:
+- Vers (G-dur): G major pentatonisk (G-A-B-D-E)
+- Chorus (Em): E moll pentatonisk (E-G-A-B-D), E Dorian (E-F#-G-A-B-C#-D)
 
 ---
 
-### KONTRABASS - Walking Bass i G-dur
+### KONTRABASS - Walking Lines
 
-#### Vers Walking Line:
-
-**Takt 1-2** (Cmaj7 → Bm7 E7):
+#### Vers (G-dur) - Takt 1-8:
 ```
+Takt 1-2 (Cmaj7 → Bm7 E7):
 | C  D  E  F# | G  F#  E  D# |
-```
 
-**Takt 3-4** (Am9 → D13):
-```
+Takt 3-4 (Am9 → D13):
 | A  B  C  C# | D  E  F#  G |
-```
 
-**Takt 5-6** (Em7 A7 → Am7 D7):
-```
+Takt 5-6 (Em7 A7 → Am7 D7):
 | E  F#  G  G# | A  B  C  C# |
+
+Takt 7-8 (Gmaj9 → G6 B7):
+| G  A  B  D | G  F#  F  D# |
+                        ↑
+                  chromatic approach til Em
 ```
 
-**Takt 7-8** (Gmaj9 → G6):
+#### Chorus - Ode to Joy (E-moll):
 ```
-| G  A  B  D | G  B  D  F# |
-```
+Takt 1-2 (Em9 → Am7 D7):
+| E  F#  G  G# | A  B  C  C# |
 
-#### Chorus Walking (over rhythm changes):
-```
-| C  E  C#  E | D  F#  G  B | C  E  C#  E | G  B  D  F# |
-```
+Takt 3-4 (Gmaj7 → B7#9):
+| G  A  B  C | B  A#  A  G# |
 
-#### Tips:
-- Kromatiske approach notes (C# til D, F# til G)
-- Kvartnoter hele veien
-- "Bouncy" feel - dette er en glad sang!
+Takt 5-6 (Em9 → Am7 D7):
+| E  F#  G  A | A  B  C  D |
+
+Takt 7-8 (Gmaj7 C#m7b5 → F#7 B7):
+| G  F#  E  C# | F#  E  D#  D |
+```
 
 ---
 
-### TROMMER - Swing Patterns (140-150 BPM)
+### TROMMER - Patterns
 
-#### Basic Komp Pattern (Vers):
-```
-         1   +   2   +   3   +   4   +
-Ride:    X   .   X   X   X   .   X   X   (ding-ding-a-ding)
-Hi-hat:  .   .   X   .   .   .   X   .   (foot chick på 2 og 4)
-Snare:   .  (g)  .  (g)  .  (g)  .  (g)  (ghost notes)
-Bass:    X   .   .   .   X   .   .   .   (1 og 3, lett)
-
-Dynamikk: mf - glad og energisk!
-```
-
-#### Intro (4 takter):
-```
-Brushes eller lett sticks
-         1   +   2   +   3   +   4   +
-Ride:    X   .   X   X   X   .   X   X
-Hi-hat:  .   .   X   .   .   .   X   .
-
-Fill i takt 4: S S T T → full band inn
-```
-
-#### Chorus (La la la) - Mer energi:
+#### Vers (standard swing):
 ```
          1   +   2   +   3   +   4   +
 Ride:    X   .   X   X   X   .   X   X
 Hi-hat:  .   .   X   .   .   .   X   .
-Snare:   .   .   X   .   .   .   X   .   (backbeat synlig)
 Bass:    X   .   .   .   X   .   .   .
-
-Dynamikk: f - dette er refrenget, gi energi!
+Dynamikk: mf
 ```
 
-#### Bridge (Dramatisk):
+#### Chorus - Ode to Joy (mer intensitet):
 ```
-Start nedtonet:
          1   +   2   +   3   +   4   +
-HH hånd: X   .   X   X   X   .   X   X   (hi-hat i stedet for ride)
-HH fot:  .   .   X   .   .   .   X   .
-Bass:    .   .   .   .   .   .   .   .   (ingen bass drum)
+Ride:    X   .   X   X   X   .   X   X
+Hi-hat:  .   .   X   .   .   .   X   .
+Snare:   .   .   X   .   .   .   X   .   (synlig backbeat)
+Bass:    X   .   .   .   X   .   .   .
+Dynamikk: f
 
-"For gutter skal en gang bli menn!" - BYGG:
-Legg til ride, bass drum, crescendo til siste vers
-
-Dynamikk: mp → f
+Accent på meloditoner - følg Ode to Joy rytmen!
 ```
 
-#### Turnaround Fill (mellom vers):
+#### Pivot-fill (vers → chorus):
 ```
 Takt 8:  1   +   2   +   3   +   4   +
-         X   .   .   .   S   S   T   X
-                         ↑   ↑   ↑   ↑
-                      snare snare tom crash
-```
-
-#### Outro:
-```
-Siste "La la la" - hold groove
-Siste akkord: CRASH på 1, la ringe ut
-Alternativ: Ritardando på siste 2 takter
+         X   .   .   .   FT  FT  S   CRASH
+                         ↑   ↑   ↑
+                    floor tom  snare → Em inn!
 ```
 
 ---
 
-### SAKSOFON - Transponert
+### SAKSOFON
 
-#### For TENOR SAX (B♭):
-Toneart skrevet: **A-dur** (en heltone opp fra G concert)
+#### Transponering:
 
-| Concert (G) | Tenor skrevet (A) |
-|-------------|-------------------|
-| G / Gmaj7 | A / Amaj7 |
-| C / Cmaj7 | D / Dmaj7 |
-| Am / Am7 | Bm / Bm7 |
-| D7 | E7 |
-| Em7 | F#m7 |
-| Bm7 | C#m7 |
-| E7 | F#7 |
-| C#dim | D#dim |
+**Tenor Sax (Bb):**
+| Concert | Tenor skrevet |
+|---------|---------------|
+| Em | F#m |
+| Am | Bm |
+| D | E |
+| G | A |
+| B | C# |
+| C#m7b5 | D#m7b5 |
 
-#### For ALTO SAX (E♭):
-Toneart skrevet: **E-dur** (en stor sekst opp fra G concert)
+**Alto Sax (Eb):**
+| Concert | Alto skrevet |
+|---------|--------------|
+| Em | C#m |
+| Am | F#m |
+| D | B |
+| G | E |
+| B | G# |
+| C#m7b5 | A#m7b5 |
 
-| Concert (G) | Alto skrevet (E) |
-|-------------|------------------|
-| G / Gmaj7 | E / Emaj7 |
-| C / Cmaj7 | A / Amaj7 |
-| Am / Am7 | F#m / F#m7 |
-| D7 | B7 |
-| Em7 | C#m7 |
-| Bm7 | G#m7 |
-| E7 | C#7 |
-| C#dim | A#dim |
+#### Ode to Joy melodi (Tenor - F#m):
+```
+Frase 1: A  A  B  C# | C# B  A  G# | F# F# G# A | A  G# G# -
+Frase 2: A  A  B  C# | C# B  A  G# | F# F# G# A | G# F# F# -
+```
 
-#### Meloditips:
-- Spill melodien på chorus ("La la la") - perfekt for sax!
-- Fill mellom vokallinjene
-- Solo på bridge eller ekstra chorus
-- Bruk G major pentatonisk for fills
+#### Ode to Joy melodi (Alto - C#m):
+```
+Frase 1: E  E  F# G# | G# F# E  D# | C# C# D# E | E  D# D# -
+Frase 2: E  E  F# G# | G# F# E  D# | C# C# D# E | D# C# C# -
+```
+
+**Tips**: Spill Ode to Joy melodien med vokalisten på chorus!
 
 ---
 
-### RYTMEGITAR - Shell Voicings (Beginner-friendly)
+### RYTMEGITAR
 
-#### Enkle 3-note voicings:
-
+#### Vers voicings (G-dur, åpne grep):
 ```
-Gmaj7:  3 x 4 4 x x  (eller: x x 5 4 3 x)
-G6:     3 x 2 4 x x
-Cmaj7:  x 3 2 4 x x  (eller: 8 x 9 9 x x)
-Am7:    x 0 2 0 1 0  (eller: 5 x 5 5 x x)
-D7:     x x 0 2 1 2  (eller: x 5 4 5 x x)
-Bm7:    x 2 4 2 3 x  (eller: 7 x 7 7 x x)
-E7:     0 2 0 1 0 0  (eller: x 7 6 7 x x)
-Em7:    0 2 2 0 3 0
-C#dim:  x 4 5 3 5 x  (passing chord)
+Gmaj7:  3 2 0 0 0 2
+G6:     3 2 0 0 0 0
+Cmaj7:  x 3 2 0 0 0
+Am7:    x 0 2 0 1 0
+D7:     x x 0 2 1 2
+Bm7:    x 2 4 2 3 2
+E7:     0 2 0 1 0 0
 ```
 
-#### Alternativ: Capo på 5. bånd
-Med capo 5:
+#### Chorus voicings (E-moll, åpne grep):
 ```
-G = D-form:   x x 0 2 3 2
-C = G-form:   3 2 0 0 0 3
-Am = Em-form: 0 2 2 0 0 0
-D7 = A7-form: x 0 2 0 2 0
+Em9:    0 2 0 0 0 2   (eller 0 2 2 0 3 2)
+Am7:    x 0 2 0 1 0
+D7:     x x 0 2 1 2
+Gmaj7:  3 2 0 0 0 2
+B7:     x 2 1 2 0 2
+C#m7b5: x 4 2 4 0 0   (eller skip - la piano ta den)
+F#7:    2 4 2 3 2 2
+Em6:    0 2 2 0 2 0
 ```
 
 #### Strumming:
 ```
-| ↓  ↓  ↓  ↓ |  (fire på gulvet)
-  choo CHIT choo CHIT
-      ↑        ↑
-   aksent   aksent
+Vers: Lett fire på gulvet
+Chorus: Kan være litt mer aggressiv, følg melodirytmen
 ```
-
-#### Tips:
-- Hold det ENKELT - G-dur er gitarvennlig!
-- Mute lett på 2 og 4
-- Lytt til hi-hat, lås deg på den
-- Chorus: Kan spille litt hardere
 
 ---
 
 ## ARRANGEMENT FORM
 
 ```
-INTRO:        | Gmaj9 | Am7 D7 | Gmaj9 | D7#9 |  (4 takter, piano/bass)
+INTRO (4 takter):
+| Em9 | Am7 D7 | Em9 | B7#9 |
+(Hint at Ode to Joy, mørk intro - piano og bass)
 
-VERS 1:       "Beethovens Niendes kor stemt opp!"
-              Full band, mf
+VERS 1 (G-dur, mf):
+"Beethovens Niendes kor stemt opp!"
+| Cmaj7 | Bm7 E7 | Am9 | D13 | Em7 A7 | Am7 D7 | Gmaj9 | G6 B7 |
 
-VERS 2:       "Utstillingsdokka i vinduet lo..."
-              Same energy
+VERS 2:
+"Utstillingsdokka i vinduet lo..."
+(Samme akkorder)
 
-CHORUS 1:     "La la la..." (sax tar melodien med vokal)
-              Energi opp! f
+CHORUS 1 - ODE TO JOY (E-moll, f):
+"La la la..." sunget til Beethoven-melodien
+| Em9 | Am7 D7 | Gmaj7 | B7#9 | Em9 | Am7 D7 | Gmaj7 C#m7b5 | F#7 B7 |
+(Sax dobler vokal!)
 
-VERS 3:       "Og kjærlighet æ'kke no' spøk..."
+VERS 3 (G-dur):
+"Og kjærlighet æ'kke no' spøk..."
 
-VERS 4:       "Utstillingsdokka..." (repeat)
+VERS 4:
+"Utstillingsdokka..." (repeat)
 
-CHORUS 2:     "La la la..."
+CHORUS 2 - ODE TO JOY:
+Enda større, full band
 
-BRIDGE:       "Jeg ble stum som en liten kanin..."
-              Ta ned, mp
-              "For gutter skal en gang bli menn!"
-              BYGG til klimaks
+BRIDGE (mp → f):
+"Jeg ble stum som en liten kanin..."
+| Cmaj7 C#dim7 | Gmaj9 | E7#9 | Am9 | D13 |
+| Cmaj7 C#dim7 | Gmaj9 | E7#9 | Am9 | D9 | B7 |
+                                        ↑
+                                  BYGG til chorus!
 
-VERS 5:       "Beethovens Niendes kor stemt opp!"
-              Full power, ff
+SAX SOLO (valgfritt, 8 takter):
+Over Ode to Joy changes
+| Em9 | Am7 D7 | Gmaj7 | B7#9 | Em9 C#m7b5 | F#7 B7 | Em6 | B7 |
 
-CHORUS 3:     "La la la..." (tag ending)
-              Repeat og fade, eller:
-              Ritardando på siste "Jeg tror jeg elsker deg..."
+VERS 5 (ff):
+"Beethovens Niendes..." - FULL POWER!
 
-OUTRO:        | Gmaj9 | Am7 D7 | Gmaj7 (hold) |
+CHORUS 3 - TAG ENDING:
+| Em9 | Am7 D7 | Gmaj7 | B7#9 |
+| Em9 C#m7b5 | F#7 B7 | Em6 | Em6 ||
+                         ↑
+                   HOLD siste akkord
+(Ritardando på siste frase: "Jeg tror jeg elsker deg...")
 ```
 
 ---
 
 ## DYNAMIKK
 
-| Del | Dynamikk | Beskrivelse |
-|-----|----------|-------------|
-| Intro | mp | Piano og bass setter groove |
-| Vers 1-2 | mf | Etabler, glad swing |
-| Chorus 1 | f | Energi opp, sax feature |
-| Vers 3-4 | mf | Hold energien |
-| Chorus 2 | f | Samme som chorus 1 |
-| Bridge start | mp | "Jeg ble stum..." - intimt |
-| Bridge slutt | f | "For gutter skal..." - BYGG! |
-| Vers 5 | ff | Full power avslutning |
-| Outro | f → mp | Avslutt pent |
+| Del | Dynamikk | Toneart | Beskrivelse |
+|-----|----------|---------|-------------|
+| Intro | mp | Em | Mørk, mystisk start |
+| Vers 1-2 | mf | G | Glad swing, etabler |
+| Chorus 1 | f | Em | ODE TO JOY! Dramatisk |
+| Vers 3-4 | mf | G | Hold energien |
+| Chorus 2 | f | Em | Enda større |
+| Bridge start | mp | G | "Jeg ble stum..." - intimt |
+| Bridge slutt | f | → Em | BYGG mot klimaks |
+| Sax solo | mf | Em | Space for improvisasjon |
+| Vers 5 | ff | G | Full power |
+| Chorus 3/Tag | f → mp | Em | Avslutt, rit. på slutten |
 
 ---
 
 ## NOTER TIL BANDET
 
 **Til vokalisten**:
-- G-dur bør passe de fleste stemmer
-- Si fra hvis du vil ha den høyere eller lavere
-- "La la la" kan synges med sax, eller la sax ta det alene
+- Lær Ode to Joy melodien! (G G A B | B A G F# | E E F# G | G F# F#)
+- "La la la" synges til denne melodien
+- Vers er i G-dur (lyst), chorus er i E-moll (mørkere)
+- Sax vil doble deg på chorus
 
 **Til keyboardisten**:
-- Stride-intro hvis du vil vise deg litt
-- Hold comping lett under vokal
-- Bridge: Følg dynamikken, bygg til klimaks
+- Introen setter stemningen - mørk Em-feel
+- Vers: Standard swing comping i G
+- Chorus: Følg Ode to Joy melodirytmen med akkordene
+- B7#9 (Hendrix chord) er viktig - gir spenning!
 
 **Til bassisten**:
-- Dette er en glad sang - la bassen "bounce"!
-- Kromatiske approach notes gir fin swing-feel
+- Pivot fra G til Em på siste takt av vers (chromatic line ned)
+- Chorus: Litt mer "marsjerende" feel (Beethoven-referanse)
 - Walking hele veien, men kan forenkle på bridge start
 
 **Til gitaristen**:
-- G-dur er din venn - enkle grep!
-- Fire på gulvet, MYKT
-- Chorus: Kan gi litt mer
-- Capo 5 er et alternativ hvis du vil ha åpne grep
+- E-moll har masse åpne grep - bruk dem!
+- Pivot-takten: G6 → B7 gir fin overgang til Em
+- Chorus kan ha litt mer attack enn vers
 
 **Til saksofonisten**:
-- Du eier "La la la" melodien!
-- Fills mellom vokallinjene
-- Vurder solo på ekstra chorus eller bridge
-- Husk transponering: Tenor = A-dur, Alto = E-dur
+- DU SPILLER ODE TO JOY MELODIEN med vokalisten!
+- Lær melodien i din toneart (Tenor: F#m, Alto: C#m)
+- Solo over Ode to Joy changes hvis ønskelig
+- Fills på vers, melodi på chorus
 
 **Til trommisen**:
-- Glad og energisk - dette er en kjærlighetssang!
-- Hi-hat fot på 2 og 4 hele veien
-- Bridge: Ta ned, så BYGG mot klimaks
-- Fills mellom seksjoner for å signalisere
+- Intro: Brushes eller veldig lett
+- Vers: Standard swing
+- Chorus: Mer energi, accent på meloditoner
+- Pivot-fill før chorus er viktig - signaliserer toneartsbytte
+- Bridge: Ta ned, så BYGG!

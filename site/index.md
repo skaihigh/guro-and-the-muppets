@@ -15,12 +15,12 @@ Complete swing jazz arrangements with chord progressions, voicings, walking bass
 <div class="songs-preview">
 {% for song in songs %}
   <div class="song-card">
-    <h3><a href="/songs/{{ song.slug }}/">{{ song.title }}</a></h3>
+    <h3><a href="{{ baseUrl }}/songs/{{ song.slug }}/">{{ song.title }}</a></h3>
     <div class="meta">{{ song.key }} | {{ song.tempo }}</div>
     <p>{{ song.description }}</p>
     <div class="song-links">
-      <a href="/songs/{{ song.slug }}/" class="btn btn-primary">View Arrangement</a>
-      <a href="/songs/{{ song.slug }}/full-score/" class="btn btn-secondary">Full Score</a>
+      <a href="{{ baseUrl }}/songs/{{ song.slug }}/" class="btn btn-primary">View Arrangement</a>
+      <a href="{{ baseUrl }}/songs/{{ song.slug }}/full-score/" class="btn btn-secondary">Full Score</a>
     </div>
   </div>
 {% endfor %}
@@ -44,27 +44,27 @@ Each arrangement provides detailed musical documentation:
 Our arrangements are scored for a classic swing sextet:
 
 <div class="instruments-overview">
-  <a href="/knowledge/keyboard-piano-swing/" class="instrument">
+  <a href="{{ baseUrl }}/knowledge/keyboard-piano-swing/" class="instrument">
     <strong>Keyboard/Piano</strong>
     <span>Shell voicings, stride patterns, comping rhythms, fills</span>
   </a>
-  <a href="/knowledge/contrabass-walking-bass/" class="instrument">
+  <a href="{{ baseUrl }}/knowledge/contrabass-walking-bass/" class="instrument">
     <strong>Contrabass</strong>
     <span>Walking bass lines with chromatic approaches</span>
   </a>
-  <a href="/knowledge/rhythm-guitar-swing/" class="instrument">
+  <a href="{{ baseUrl }}/knowledge/rhythm-guitar-swing/" class="instrument">
     <strong>Rhythm Guitar</strong>
     <span>Freddie Green style shell voicings, four-on-the-floor</span>
   </a>
-  <a href="/knowledge/drums-swing-patterns/" class="instrument">
+  <a href="{{ baseUrl }}/knowledge/drums-swing-patterns/" class="instrument">
     <strong>Drums</strong>
     <span>Swing patterns, hi-hat work, fills, breaks</span>
   </a>
-  <a href="/knowledge/saxophone-jazz-melodic/" class="instrument">
+  <a href="{{ baseUrl }}/knowledge/saxophone-jazz-melodic/" class="instrument">
     <strong>Saxophone</strong>
     <span>Melody, harmony, transposed for alto/tenor</span>
   </a>
-  <a href="/knowledge/jazz-vocal-styling/" class="instrument">
+  <a href="{{ baseUrl }}/knowledge/jazz-vocal-styling/" class="instrument">
     <strong>Vocals</strong>
     <span>Lyrics with chord symbols, phrasing suggestions</span>
   </a>
@@ -74,15 +74,15 @@ Our arrangements are scored for a classic swing sextet:
 
 <div class="index-grid">
   <div class="card">
-    <h3><a href="/knowledge/">Knowledge Base</a></h3>
+    <h3><a href="{{ baseUrl }}/knowledge/">Knowledge Base</a></h3>
     <p>Swing era fundamentals, walking bass theory, jazz voicings, and arrangement techniques.</p>
   </div>
   <div class="card">
-    <h3><a href="/agents/">Arrangement Agents</a></h3>
+    <h3><a href="{{ baseUrl }}/agents/">Arrangement Agents</a></h3>
     <p>The specialized AI agents that help create these arrangements.</p>
   </div>
   <div class="card">
-    <h3><a href="/skills/">Skills</a></h3>
+    <h3><a href="{{ baseUrl }}/skills/">Skills</a></h3>
     <p>Techniques for transforming songs to swing, generating bass lines, and more.</p>
   </div>
 </div>

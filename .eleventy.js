@@ -1,4 +1,10 @@
 module.exports = function(eleventyConfig) {
+  // Base URL for GitHub Pages (repository name)
+  const pathPrefix = process.env.ELEVENTY_ENV === 'production' ? '/guro-and-the-muppets' : '';
+
+  // Add global data for path prefix
+  eleventyConfig.addGlobalData("baseUrl", pathPrefix);
+
   // Copy static assets
   eleventyConfig.addPassthroughCopy("site/css");
   eleventyConfig.addPassthroughCopy("site/js");
@@ -44,6 +50,7 @@ module.exports = function(eleventyConfig) {
       includes: "_includes",
       data: "_data"
     },
+    pathPrefix: pathPrefix,
     markdownTemplateEngine: "njk",
     htmlTemplateEngine: "njk"
   };
