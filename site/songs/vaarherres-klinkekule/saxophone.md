@@ -3,7 +3,6 @@ layout: part.njk
 title: Saxophone
 song: vaarherres-klinkekule
 songTitle: Vaarherres Klinkekule
-midi: saxophone
 ---
 
 # Vårherres Klinkekule - SAKSOFON

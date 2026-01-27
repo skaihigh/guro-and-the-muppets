@@ -3,7 +3,6 @@ layout: part.njk
 title: Guitar
 song: vaarherres-klinkekule
 songTitle: Vaarherres Klinkekule
-midi: guitar
 ---
 
 # Vårherres Klinkekule - RYTMEGITAR

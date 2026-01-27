@@ -3,7 +3,6 @@ layout: part.njk
 title: Full Score
 song: crescendo-i-gagata
 songTitle: Crescendo i Gagata
-midi: full-band
 ---
 
 # Crescendo i gågata - Swing Jazz Arrangement

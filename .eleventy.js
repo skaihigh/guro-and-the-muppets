@@ -8,7 +8,6 @@ module.exports = function(eleventyConfig) {
   // Copy static assets
   eleventyConfig.addPassthroughCopy("site/css");
   eleventyConfig.addPassthroughCopy("site/js");
-  eleventyConfig.addPassthroughCopy("site/midi");
   eleventyConfig.addPassthroughCopy("site/downloads");
   eleventyConfig.addPassthroughCopy("site/CNAME");
   eleventyConfig.addPassthroughCopy("notation/out");

@@ -3,7 +3,6 @@ layout: part.njk
 title: Drums
 song: vaarherres-klinkekule
 songTitle: Vaarherres Klinkekule
-midi: drums
 ---
 
 # Vårherres Klinkekule - TROMMER

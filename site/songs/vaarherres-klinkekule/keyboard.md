@@ -3,7 +3,6 @@ layout: part.njk
 title: Keyboard
 song: vaarherres-klinkekule
 songTitle: Vaarherres Klinkekule
-midi: keyboard
 ---
 
 # Vårherres Klinkekule - KEYBOARD

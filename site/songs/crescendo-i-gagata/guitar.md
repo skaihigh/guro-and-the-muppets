@@ -3,7 +3,6 @@ layout: part.njk
 title: Guitar
 song: crescendo-i-gagata
 songTitle: Crescendo i Gagata
-midi: guitar
 ---
 
 # Crescendo i gågata - RYTMEGITAR

@@ -3,7 +3,6 @@ layout: part.njk
 title: Drums
 song: crescendo-i-gagata
 songTitle: Crescendo i Gagata
-midi: drums
 ---
 
 # Crescendo i gågata - TROMMER

@@ -3,7 +3,6 @@ layout: part.njk
 title: Full Score
 song: vaarherres-klinkekule
 songTitle: Vaarherres Klinkekule
-midi: full-band
 ---
 
 # Vårherres Klinkekule - Swing Jazz Arrangement

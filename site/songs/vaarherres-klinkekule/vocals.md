@@ -3,7 +3,6 @@ layout: part.njk
 title: Vocals
 song: vaarherres-klinkekule
 songTitle: Vaarherres Klinkekule
-midi: vocals
 ---
 
 # Vårherres Klinkekule - VOKAL

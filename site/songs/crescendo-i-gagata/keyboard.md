@@ -3,7 +3,6 @@ layout: part.njk
 title: Keyboard
 song: crescendo-i-gagata
 songTitle: Crescendo i Gagata
-midi: keyboard
 ---
 
 # Crescendo i gågata - KEYBOARD

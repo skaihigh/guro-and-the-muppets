@@ -3,7 +3,6 @@ layout: part.njk
 title: Bass
 song: crescendo-i-gagata
 songTitle: Crescendo i Gagata
-midi: bass
 ---
 
 # Crescendo i gågata - KONTRABASS

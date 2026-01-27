@@ -32,8 +32,6 @@ Each song package contains:
 
 | Component | Description |
 |-----------|-------------|
-| Full Band MIDI | Complete arrangement with all instruments |
-| Individual MIDIs | Separate tracks for each instrument |
 | Sheet Music | Detailed notation in markdown format |
 | Download Package | ZIP file with everything included |
 

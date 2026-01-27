@@ -3,7 +3,6 @@ layout: part.njk
 title: Bass
 song: vaarherres-klinkekule
 songTitle: Vaarherres Klinkekule
-midi: bass
 ---
 
 # Vårherres Klinkekule - KONTRABASS

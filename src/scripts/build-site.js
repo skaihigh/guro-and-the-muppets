@@ -6,7 +6,6 @@ const { execSync } = require('child_process');
 const ROOT = path.join(__dirname, '../..');
 const SITE_DIR = path.join(ROOT, 'site');
 const OUTPUT_DIR = path.join(ROOT, 'docs');
-const MIDI_SOURCE = path.join(ROOT, 'output/midi');
 const SONGS_SOURCE = path.join(ROOT, 'songs');
 const KNOWLEDGE_SOURCE = path.join(ROOT, 'knowledge');
 const AGENTS_SOURCE = path.join(ROOT, 'agents');
@@ -84,15 +83,6 @@ function copyMarkdownWithFrontMatter(src, dest, frontMatter) {
   console.log(`Copied with front matter: ${path.relative(ROOT, src)}`);
 }
 
-function copyMidiFiles() {
-  console.log('\n--- Copying MIDI files ---');
-  for (const song of SONGS) {
-    const src = path.join(MIDI_SOURCE, song.slug);
-    const dest = path.join(SITE_DIR, 'midi', song.slug);
-    copyDir(src, dest);
-  }
-}
-
 function copySongParts() {
   console.log('\n--- Copying song instrument parts ---');
   for (const song of SONGS) {
@@ -100,14 +90,11 @@ function copySongParts() {
       const src = path.join(SONGS_SOURCE, song.slug, `${instrument}.md`);
       const dest = path.join(SITE_DIR, 'songs', song.slug, `${instrument}.md`);
 
-      const midiName = instrument === 'full-score' ? 'full-band' : instrument;
-
       copyMarkdownWithFrontMatter(src, dest, {
         layout: 'part.njk',
         title: instrument.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
         song: song.slug,
-        songTitle: song.title,
-        midi: midiName
+        songTitle: song.title
       });
     }
   }
@@ -193,12 +180,6 @@ async function createZipPackages() {
       archive.on('error', reject);
       archive.pipe(output);
 
-      // Add MIDI files
-      const midiDir = path.join(MIDI_SOURCE, song.slug);
-      if (fs.existsSync(midiDir)) {
-        archive.directory(midiDir, 'midi');
-      }
-
       // Add sheet music (markdown files)
       const sheetsDir = path.join(SONGS_SOURCE, song.slug);
       if (fs.existsSync(sheetsDir)) {
@@ -228,7 +209,6 @@ async function main() {
   console.log('Building Guro and the Muppets website...\n');
 
   // Copy source files
-  copyMidiFiles();
   copySongParts();
   copyKnowledgeArticles();
   copyAgents();

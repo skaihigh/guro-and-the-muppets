@@ -3,7 +3,6 @@ layout: part.njk
 title: Saxophone
 song: crescendo-i-gagata
 songTitle: Crescendo i Gagata
-midi: saxophone
 ---
 
 # Crescendo i gågata - SAKSOFON

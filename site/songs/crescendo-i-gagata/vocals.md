@@ -3,7 +3,6 @@ layout: part.njk
 title: Vocals
 song: crescendo-i-gagata
 songTitle: Crescendo i Gagata
-midi: vocals
 ---
 
 # Crescendo i gågata - VOKAL
