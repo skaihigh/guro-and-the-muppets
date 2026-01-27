@@ -41,38 +41,18 @@ body {
 /* Site Banner */
 .site-banner {
   width: 100%;
-  background: var(--color-bg-light);
-  text-align: center;
+  background: #2d1a12;
   padding: 0;
   border-bottom: 3px solid var(--color-primary);
-  position: relative;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .site-banner a {
+  width: 100%;
+  max-width: 1100px;
   display: block;
-  position: relative;
-}
-
-.site-banner a::before,
-.site-banner a::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 20%;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.site-banner a::before {
-  left: 0;
-  background: linear-gradient(to right, var(--color-bg-light) 0%, transparent 100%);
-}
-
-.site-banner a::after {
-  right: 0;
-  background: linear-gradient(to left, var(--color-bg-light) 0%, transparent 100%);
 }
 
 .banner-image {
@@ -81,17 +61,26 @@ body {
   display: block;
   object-fit: cover;
   object-position: center top;
-  max-height: 220px;
 }
 
-@media (max-width: 768px) {
+/* Gradient fades only on wide screens where image hits max-width */
+@media (min-width: 1101px) {
   .banner-image {
-    max-height: 150px;
-  }
-
-  .site-banner a::before,
-  .site-banner a::after {
-    width: 10%;
+    --fade-distance: 150px;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black var(--fade-distance),
+      black calc(100% - var(--fade-distance)),
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      black var(--fade-distance),
+      black calc(100% - var(--fade-distance)),
+      transparent 100%
+    );
   }
 }
 
