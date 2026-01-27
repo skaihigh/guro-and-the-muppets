@@ -4,8 +4,7 @@ title: Home
 ---
 
 <div class="hero">
-  <h1>Guro and the Muppets</h1>
-  <p>Swing jazz arrangements of Norwegian classics, with detailed musical documentation for each instrument.</p>
+  <p class="tagline">Swing jazz arrangements of Norwegian classics, with detailed musical documentation for each instrument.</p>
 </div>
 
 ## Arrangements
