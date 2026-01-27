@@ -26,19 +26,6 @@ Complete swing jazz arrangements with chord progressions, voicings, walking bass
 {% endfor %}
 </div>
 
-## What's Included
-
-Each arrangement provides detailed musical documentation:
-
-| Component | Description |
-|-----------|-------------|
-| **Full Score** | Complete arrangement overview with form, dynamics, and all parts |
-| **Chord Progressions** | Reharmonized jazz voicings with shell voicings notation |
-| **Walking Bass** | Note-by-note walking bass lines with approach patterns |
-| **Comping Patterns** | Rhythm guitar and keyboard comping with swing feel |
-| **Drum Patterns** | Swing patterns, fills, and dynamic markings |
-| **Transpositions** | Parts for Bb and Eb instruments (saxophone) |
-
 ## Instruments
 
 Our arrangements are scored for a classic swing sextet:

@@ -4,10 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ title }} | Guro and the Muppets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Raleway:wght@400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ baseUrl }}/css/style.css">
   <link rel="stylesheet" href="{{ baseUrl }}/css/notation.css">
 </head>
 <body>
+  <header class="site-banner">
+    <a href="{{ baseUrl }}/">
+      <img src="{{ baseUrl }}/images/theBand.png" alt="Guro and the Muppets" class="banner-image">
+    </a>
+  </header>
   {% include "nav.njk" %}
 
   <main class="container">

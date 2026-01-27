@@ -26,15 +26,6 @@ All songs are arranged in authentic swing jazz style, perfect for lindy hop danc
 {% endfor %}
 </div>
 
-## What's Included
-
-Each song package contains:
-
-| Component | Description |
-|-----------|-------------|
-| Sheet Music | Detailed notation in markdown format |
-| Download Package | ZIP file with everything included |
-
 ## Instruments
 
 Our arrangements are scored for a classic swing sextet:
