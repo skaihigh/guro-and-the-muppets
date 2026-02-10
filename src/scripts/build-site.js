@@ -21,6 +21,11 @@ const SONGS = [
     slug: 'crescendo-i-gagata',
     title: 'Crescendo i Gagata',
     instruments: ['keyboard', 'bass', 'guitar', 'drums', 'saxophone', 'vocals', 'full-score']
+  },
+  {
+    slug: 'minor-swing',
+    title: 'Minor Swing',
+    instruments: ['keyboard', 'bass', 'guitar', 'drums', 'saxophone', 'full-score']
   }
 ];
 

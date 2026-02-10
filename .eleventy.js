@@ -11,6 +11,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/images");
   eleventyConfig.addPassthroughCopy("site/downloads");
   eleventyConfig.addPassthroughCopy("site/CNAME");
+  eleventyConfig.addPassthroughCopy("site/soundfonts");
+  eleventyConfig.addPassthroughCopy("site/songs/minor-swing/*.mid");
   eleventyConfig.addPassthroughCopy("notation/out");
 
   // Add markdown filter for rendering markdown in templates

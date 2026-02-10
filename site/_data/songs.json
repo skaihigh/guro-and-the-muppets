@@ -16,5 +16,14 @@
     "original": "Lillebjorn Nilsen",
     "description": "Features Beethoven's Ode to Joy in the chorus. A swing arrangement with major/minor contrast.",
     "instruments": ["keyboard", "bass", "guitar", "drums", "saxophone", "vocals"]
+  },
+  {
+    "title": "Minor Swing",
+    "slug": "minor-swing",
+    "key": "A minor",
+    "tempo": "200 BPM (fast gypsy jazz swing)",
+    "original": "Django Reinhardt / St\u00e9phane Grappelli (1937)",
+    "description": "Gypsy jazz classic arranged for swing sextet with la pompe guitar, brush drums, and arpeggio-based melodies. Includes MIDI playback.",
+    "instruments": ["keyboard", "bass", "guitar", "drums", "saxophone"]
   }
 ]
